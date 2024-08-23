@@ -1,0 +1,128 @@
+.custom-container-1 { /* Estilos para el Contenedor 1 */
+    margin-bottom: 30px;/* espacio abajo del contenedor*/
+    .image-container {
+        position: relative;
+      }      
+      .image {
+        width: 100%; /* Establece el ancho máximo del contenedor */
+        height: auto; /* Establece la altura automática para mantener la proporción original */
+        object-fit: cover; /* Ajusta la imagen para cubrir todo el contenedor sin distorsionar */
+      }
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0; /* alineado a la izquierda */
+        width: 50%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.295); /* transparencia */
+        padding: 20px;
+        box-sizing: border-box;
+        color: #fff; /*  color del texto */
+        text-align: center; /* Centrar horizontalmente */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centrar verticalmente */
+        font-family: "Montserrat", sans-serif; /*  tipo de letra  */
+      }      
+      .overlay h2 {
+        font-size: 35px; /* tamaño del titulo */
+        font-weight: bold; 
+        margin-bottom: 50px; /* espacio entre el título y el texto */
+      }      
+      .overlay p {
+        margin: 0 30px; /* Margen horizontal */
+        font-size: 25px;
+        margin-bottom: 10px;
+      }  
+  }
+  
+  
+  .custom-container-2 { /* Estilos para el Contenedor 2 */
+    margin-bottom: 30px; /* espacio abajo del contenedor*/
+    .image-container {
+        position: relative;
+      }
+      
+      .image {
+        width: 100%; /* Establece el ancho máximo del contenedor */
+        height: auto; /* Establece la altura automática para mantener la proporción original */
+        object-fit: cover; /* Ajusta la imagen para cubrir todo el contenedor sin distorsionar */
+      }
+      
+      .overlay {
+        position: absolute;
+        top: 0;
+        right: 0; /* alineado a la derecha */
+        width: 50%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.473); /* transparencia */
+        padding: 20px;
+        box-sizing: border-box;
+        color: #fff; /*  color del texto */
+        text-align: center; /* Centrar horizontalmente */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centrar verticalmente */
+        font-family: "Montserrat", sans-serif; /*  tipo de letra  */
+      }
+      
+      .overlay h2 {
+        font-size: 35px; /* tamaño del titulo */
+        font-weight: bold; 
+        margin-bottom: 50px; /* espacio entre el título y el texto */
+      }
+      
+      .overlay p {
+        margin: 0 30px; /* Margen horizontal */
+        font-size: 25px;
+        margin-bottom: 10px;
+      }
+    
+  }
+  
+  
+  .custom-container-3 { /* Estilos para el Contenedor 3 */
+    margin-bottom: 30px; /* espacio abajo del contenedor*/
+    .image-container {
+        position: relative;
+      }
+      
+      .image {
+        width: 100%; /* Establece el ancho máximo del contenedor */
+        height: auto; /* Establece la altura automática para mantener la proporción original */
+        object-fit: cover; /* Ajusta la imagen para cubrir todo el contenedor sin distorsionar */
+      }
+      
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0; /* alineado a la izquierda */
+        width: 50%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.356); /* transparencia */
+        padding: 20px;
+        box-sizing: border-box;
+        color: #fff; /*  color del texto */
+        text-align: center; /* Centrar horizontalmente */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centrar verticalmente */
+        font-family: "Montserrat", sans-serif; /*  tipo de letra  */
+      }
+      
+      .overlay h2 {
+        font-size: 35px; /* tamaño del titulo */
+        font-weight: bold; 
+        margin-bottom: 50px; /* espacio entre el título y el texto */
+      }
+      
+      .overlay p {
+        margin: 0 30px; /* Margen horizontal */
+        font-size: 25px;
+        margin-bottom: 10px;
+      }
+    
+  }
+  
+
+  

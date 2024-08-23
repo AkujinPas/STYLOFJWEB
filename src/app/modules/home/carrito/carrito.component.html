@@ -1,0 +1,59 @@
+<!-- Button trigger modal -->
+
+  
+  <!-- Modal -->
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" class="modal fade lg"  id="exampleModal3" tabindex="-10" aria-labelledby="exampleModal3Label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="col-md-8"class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModal3Label">Carrito de Compras</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <!-- Inician los productos -->
+        <div class="modal-body">
+            ...
+            <div ng-container >
+                <div>
+                    <img src="./../../../../assets/imagenes/Tenis/Tenis2.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="col-md-12">
+                    <h2>Nombre Del Producto</h2>
+                    <p class="price">MXN $800.00</p>
+                    <p><b>Talla:</b> 27</p>
+                    <p><b>Marca:</b> Imperio Company</p>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Punto de venta para entrega de producto</option>
+                        <option value="1">Tienda 1</option>
+                        <option value="2">Tienda 2</option>
+                        <option value="3">Tienda 3</option>
+                        <option value="4">Tienda 4</option>
+                        <option value="5">Tienda 5</option>
+                    </select>
+                    <p></p>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Seleccione la Cantidad</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div>
+                    <p></p>
+                    <button type="button" class="btn btn-danger">Eliminar Producto</button>
+                </div>
+            </div>
+            ...
+            <!-- Terminan los productos y muestra el total -->
+            <p>Total a pagar: $ ...</p>
+            <p><b>Se informa al cliente que al realizar su compra, tiene que asitir al punto de venta de su eleccion</b></p>
+            ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Comprar Carrito</button>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,91 @@
+<div class="container-md">
+    <div class="container px-4 text-center"><h4 figure class="col-text-center">Ingrese los datos del Titular de la tarjeta</h4></div>
+    <form class="row g-3 needs-validation" novalidate>
+        <div class="col-md-4">
+          <label for="validationCustom01" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="validationCustom02" class="form-label">Apellido</label>
+          <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="validationCustomUsername" class="form-label">Ciudad</label>
+          <div class="input-group has-validation">
+            
+            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+            <div class="invalid-feedback">
+              Ingrese su ciudad.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="validationCustom03" class="form-label">Codigo postal</label>
+          <input type="text" class="form-control" id="validationCustom03" required>
+          <div class="invalid-feedback">
+            Inserte el codigo postal para continuar.
+          </div>
+        </div>
+        <div class="col-md-3">
+          <label for="validationCustom04" class="form-label">Colonia</label>
+          <select class="form-select" id="validationCustom04" required>
+            <option selected disabled value="">Elija...</option>
+            <option>...</option>
+          </select>
+          <div class="invalid-feedback">
+            Por favor elija una colonia
+          </div>
+        </div>
+        <div class="col-md-3">
+            <label for="validationCustom04" class="form-label">Tipo de Tarjeta</label>
+            <select class="form-select" id="validationCustom04" required>
+              <option selected enabled value="">Tarjeta de Credito</option>
+              <option selected enabled value="">Tarjeta de Debito</option>
+            </select>
+            <div class="invalid-feedback">
+              Selecciones una opcion
+            </div>
+          </div>
+        <div class="col-md-4">
+            <label for="validationCustom01" class="form-label">Numeros de la tarjeta</label>
+            <input type="text" class="form-control" id="validationCustom01" value="xxxx-xxxx-xxxx-xxx" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+          <div class="col-md-4">
+            <label for="validationCustom02" class="form-label">Fecha de vencimiento</label>
+            <input type="text" class="form-control" id="validationCustom02" value="xx/xx/xxxx" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+          <div class="col-md-4">
+            <label for="validationCustom02" class="form-label">Numeros Confidenciales del Reverso</label>
+            <input type="text" class="form-control" id="validationCustom02" value="xxx" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+            <label class="form-check-label" for="invalidCheck">
+              Acepte los terminos y condiciones de usuario
+            </label>
+            <div class="invalid-feedback">
+              <p><b>Acepte los terminos y condiciones para continuar.</b></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit">Guardar Datos</button>
+        </div>
+      </form>
+</div>

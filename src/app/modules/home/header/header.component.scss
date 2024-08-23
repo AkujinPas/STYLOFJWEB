@@ -1,0 +1,31 @@
+.categories-container {
+    margin: 0 20px;
+    /* margen horizontal de 20px */
+    padding: 10px 0;
+    /*relleno superior e inferior de 10px */
+    width: calc(100% - 40px);
+    /* Calcular el ancho restando el margen horizontal */
+}
+
+.nav-link[href="#"]:not(.nav-item:last-child) {
+    color: #EEB000;
+ }
+
+.nav-link.active {
+    background-color: #ffffff; /* fondo pestaña activa */
+    color: #EEB000;
+    font-weight: bold;    /* color de texto de la pestaña */
+}
+
+.nav-link.active::after {
+    content: '';    /* línea inferior */
+    display: block;
+    border-bottom: 2px solid #EEB000; /* color de la línea */
+    width: 70%;
+    margin: 0 auto;    /* Centra la línea horizontalmente */
+}
+
+.nav-link {
+    color: #000000;    /* Color texto categorias */
+}
+
