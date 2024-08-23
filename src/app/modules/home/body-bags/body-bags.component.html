@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="album py-5 bg-body-tertiary" >
+
+      <div class="card-container">
+        <!-- Mostrar products de Zapatos -->
+        <div class="row row-cols-1 row-cols-md-4 g-4" *ngFor="let product of products" class="card">
+
+<input type="image" [src]="'/assets/imagenes/accesories/' + product.image_ini" alt="{{ product.name }}" style="border: double; width: 300px; height: 300px; overflow: hidden;" onclick="matusalen">
+          <h5 style="color:#000">{{ product.name }}</h5>
+          <p style="color: #111">{{ product.description }}</p>
+          <p style="color: #eeb000; font-weight: bold; font-size: 20px;">Precio: ${{ product.price }}</p>
+
+        </div>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,277 @@
+<div>
+
+  <div class="d-flex justify-content-between">
+    <h4>Form customer</h4>
+    <a href="#" routerLink="/product/index" class="btn btn-primaryt">Back</a>
+  </div>
+
+  <hr/>
+
+    <form [formGroup]="form" (ngSubmit)="submit()">
+
+        <div class="form-group row">
+            <div class="col-md-6 ">
+              <label for="title">Name:</label>
+              <input
+                formControlName="name"
+                id="name"
+                type="text"
+                class="form-control">
+            </div>
+        </div>
+
+
+<!-- Offer Enable -->
+<div class="form-group row">
+  <div class="col-md-6">
+    <label for="offer_enable">Offer Enable:</label>
+    <select formControlName="offer_enable" id="offer_enable" class="form-control">
+      <option value="Si">Si</option>
+      <option value="No">No</option>
+    </select>
+  </div>
+</div>
+
+<!-- Price -->
+<div class="form-group row" *ngIf="form.get('offer_enable').value === 'no'">
+  <div class="col-md-6">
+    <label for="price">Price:</label>
+    <input
+      formControlName="price"
+      id="price"
+      type="number"
+      class="form-control">
+  </div>
+</div>
+
+<!-- Price Offer -->
+<div class="form-group row" *ngIf="form.get('offer_enable').value === 'si'">
+  <div class="col-md-6">
+    <label for="price_offer">Price Offer:</label>
+    <input
+      formControlName="price_offer"
+      id="price_offer"
+      type="number"
+      class="form-control">
+  </div>
+</div>
+
+
+<!-- Description -->
+<div class="form-group row">
+  <div class="col-md-6">
+    <label for="description">Description:</label>
+    <input
+      formControlName="description"
+      id="description"
+      type="text"
+      class="form-control">
+  </div>
+</div>
+
+<!-- Details -->
+<div class="form-group row">
+  <div class="col-md-6">
+    <label for="details">Details:</label>
+    <input
+      formControlName="details"
+      id="details"
+      type="text"
+      class="form-control">
+  </div>
+</div>
+
+<!-- Stock -->
+<div class="form-group row">
+  <div class="col-md-6">
+    <label for="stock">Stock:</label>
+    <input
+      formControlName="stock"
+      id="stock"
+      type="number"
+      class="form-control">
+  </div>
+</div>
+
+<!-- Category -->
+<div class="form-group row">
+  <div class="col-md-6">
+    <label for="category">Category:</label>
+    <select formControlName="category" id="category" class="form-control">
+      <option value="Calzado">Calzado</option>
+      <option value="Mochilas y Bolsos">Mochilas y Bolsos</option>
+      <option value="Accesorios y regalos">Accesorios y regalos</option>
+      <option value="Hogar">Hogar</option>
+      <option value="Moda">Moda</option>
+      <option value="Mascotas">Mascotas</option>
+      <option value="Libros">Libros</option>
+    </select>
+  </div>
+</div>
+
+
+<!-- Size Shoes -->
+<div class="form-group row" *ngIf="form.get('category').value === 'Calzado'">
+  <div class="col-md-6">
+    <label for="size_shoes">Size Shoes:</label>
+    <input
+      formControlName="size_shoes"
+      id="size_shoes"
+      type="text"
+      class="form-control">
+  </div>
+</div>
+
+<!-- Size Fashion -->
+<div class="form-group row" *ngIf="form.get('category').value === 'Moda'">
+  <div class="col-md-6">
+    <label for="size_fashion">Size Fashion:</label>
+    <input
+      formControlName="size_fashion"
+      id="size_fashion"
+      type="text"
+      class="form-control">
+  </div>
+</div>
+
+<!-- Mark -->
+<div class="form-group row">
+  <div class="col-md-6">
+    <label for="mark">Mark:</label>
+    <input
+      formControlName="mark"
+      id="mark"
+      type="text"
+      class="form-control">
+  </div>
+</div>
+
+<!-- Model -->
+<div class="form-group row">
+  <div class="col-md-6">
+    <label for="model">Model:</label>
+    <input
+      formControlName="model"
+      id="model"
+      type="text"
+      class="form-control">
+  </div>
+</div>
+
+
+<!-- Color -->
+<div class="form-group row">
+  <div class="col-md-6">
+    <label for="color">Color:</label>
+    <input
+      formControlName="color"
+      id="color"
+      type="text"
+      class="form-control">
+  </div>
+</div>
+
+
+<!-- Image Ini -->
+<div class="form-group row">
+  <div class="col-md-6">
+    <label for="image_ini">Imagen principal</label>
+    <input
+      formControlName="image_ini"
+      id="image_ini"
+      type="file"
+      class="form-control"
+      accept="image/*">
+  </div>
+</div>
+
+<div class="form-group row">
+  <div class="col-md-6">
+    <label for="carrusel">Imagenes para carrusel:</label>
+    <select formControlName="carrusel" id="carrusel" class="form-control" >
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+  </div>
+</div>
+
+<div class="form-group row" *ngIf="form.get('carrusel').value >= 1">
+  <div class="col-md-6">
+    <label for="image_1">Imagen</label>
+    <input
+      formControlName="image_1"
+      id="image_1"
+      type="file"
+      class="form-control"
+      accept="image/*">
+  </div>
+</div>
+
+<div class="form-group row" *ngIf="form.get('carrusel').value >= 2">
+  <div class="col-md-6">
+    <label for="image_2">Imagen</label>
+    <input
+      formControlName="image_2"
+      id="image_2"
+      type="file"
+      class="form-control"
+      accept="image/*">
+  </div>
+</div>
+
+<div class="form-group row" *ngIf="form.get('carrusel').value >= 3">
+  <div class="col-md-6">
+    <label for="image_3">Imagen</label>
+    <input
+      formControlName="image_3"
+      id="image_3"
+      type="file"
+      class="form-control"
+      accept="image/*">
+  </div>
+</div>
+
+<div class="form-group row" *ngIf="form.get('carrusel').value >= 4">
+  <div class="col-md-6">
+    <label for="image_4">Imagen</label>
+    <input
+      formControlName="image_4"
+      id="image_4"
+      type="file"
+      class="form-control"
+      accept="image/*">
+  </div>
+</div>
+
+<div class="form-group row" *ngIf="form.get('carrusel').value >= 5">
+  <div class="col-md-6">
+    <label for="image_5">Imagen</label>
+    <input
+      formControlName="image_5"
+      id="image_5"
+      type="file"
+      class="form-control"
+      accept="image/*">
+  </div>
+</div>
+
+<!-- Image 1 to 5 -->
+<!-- ... (Repite el patrón para las imágenes 1 a 5) -->
+
+<!-- Publish Date -->
+<div class="form-group row">
+  <div class="col-md-6">
+    <label for="publish_date">Publish Date:</label>
+    <input
+      formControlName="publish_date"
+      id="publish_date"
+      type="date"
+      class="form-control">
+  </div>
+</div>
+        <button class="btn btn-primary" type="submit" >Submit</button>
+    </form>
+</div>
