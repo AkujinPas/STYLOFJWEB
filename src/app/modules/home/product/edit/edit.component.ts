@@ -11,6 +11,7 @@ import { Product } from '../product';
   styleUrls: ['./edit.component.css']
 })
 export class EditComponent implements OnInit {
+  image_ini: string | ArrayBuffer | null = null;
 
   id: number;
   product: Product;
@@ -43,6 +44,7 @@ export class EditComponent implements OnInit {
         color: new FormControl('', [Validators.required]),
         offer_enable: new FormControl('', [Validators.required]),
         image_ini: new FormControl('', [Validators.required]),
+        carrousel_num: new FormControl('', [Validators.required]),
         image_1: new FormControl('', [Validators.required]),
         image_2: new FormControl('', [Validators.required]),
         image_3: new FormControl('', [Validators.required]),
@@ -52,6 +54,80 @@ export class EditComponent implements OnInit {
     });
 
   }
+
+  onFileSelected(event: any, controlName: string) {
+    const file = event.target.files[0];
+    if (file) {
+      this.convertToBase64(file).then(base64Image => {
+        this.form.patchValue({
+          [controlName]: base64Image
+        });
+      });
+    }
+  }
+
+  convertToBase64(file: File): Promise<string> {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => {
+        resolve(reader.result as string);
+      };
+      reader.onerror = error => reject(error);
+    });
+  }
+
+  offerEnableChanged() {
+    const offerEnableControl = this.form.get('offer_enable');
+    const priceOfferControl = this.form.get('price_offer');
+    const priceControl = this.form.get('price');
+
+    // Si la opción es 'no', establece el valor de 'Price Offer' en blanco
+    if (offerEnableControl.value === 'no') {
+      priceOfferControl.setValue('');
+    }
+    if (offerEnableControl.value === 'si') {
+      priceControl.setValue('');
+    }
+  }
+
+  carruselChanged() {
+    const carruselControl = this.form.get('carrousel_num');
+    const imageSecondControl = this.form.get('image_2');
+    const imageThirdControl = this.form.get('image_3');
+    const imageFourthControl = this.form.get('image_4');
+    const imageFifthControl = this.form.get('image_5');
+
+    if (carruselControl.value < 2) {
+      imageSecondControl.setValue('');
+    }
+    if (carruselControl.value < 3) {
+      imageThirdControl.setValue('');
+    }
+    if (carruselControl.value < 4) {
+      imageFourthControl.setValue('');
+    }
+    if (carruselControl.value < 5) {
+      imageFifthControl.setValue('');
+    }
+
+  }
+
+  categoryChanged() {
+    const categoryControl = this.form.get('category');
+    const sizeShoesControl = this.form.get('size_shoes');
+    const sizeFashionControl = this.form.get('size_fashion');
+
+
+    if (categoryControl.value !== 'size_shoes') {
+      sizeShoesControl.setValue('');
+    }
+    if (categoryControl.value !== 'size_fashion') {
+      sizeFashionControl.setValue('');
+    }
+
+  }
+
 
   get f(){
     return this.form.controls;

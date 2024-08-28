@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-inicio-sesion',
@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./inicio-sesion.component.scss']
 })
 export class InicioSesionComponent {
+  @Input() data: any;
+  @Output() closeModal = new EventEmitter();
 
+  onCloseModal(): void {
+    this.closeModal.emit();
+  }
 }

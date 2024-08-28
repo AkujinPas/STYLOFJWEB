@@ -1,0 +1,5 @@
+.container-border {
+    border: 1px solid #ccc; /* Color y ancho del borde */
+    border-radius: 5px; /* Borde redondeado (opcional) */
+    margin: 10px; /* Espacio exterior para separar del contenedor padre */
+}

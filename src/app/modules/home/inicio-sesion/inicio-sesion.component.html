@@ -1,5 +1,4 @@
-<!--Inicio de Sesion-->
-
+<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal1" data-bs-whatever="@mdo">Iniciar Sesion</button>
 
 <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModal1Label" aria-hidden="true">
     <div class="modal-dialog">
@@ -18,15 +17,20 @@
                     <label for="recipient-pasword" class="col-form-label">Contraseña</label>
                     <input type="text"class="form-control" id="recipient-pasword">
                 </div>
-                </form>    
-                <h2 class="fs-5">No tienes usuario?</h2>
-                <div class="nav justify-content">
-                    <p class="btn btn-primary" class="nav-item" data-bs-toggle="modal" data-bs-target="#exampleModal4">
-                        <a class="nav-link" href="#" data-bs-toggle="tooltip" title="Tooltip">Crea tu Usuario</a>
-                        y se parte del grupo IMPERIO
-                    </p>
-                    
-                </div>
+                </form>
+                    <h2 class="fs-5">No tienes usuario?</h2>
+                    <p><a href="#" data-bs-toggle="tooltip" title="Tooltip">Crea tu Usuario</a> y se parte del grupo IMPERIO</p>
+                    <div class="container">
+                        <div class="container" style="padding:20px;">
+                          <h5 style="text-align:center;">
+                            <a href="/product/index"> Ingresar productos </a>
+                          </h5>
+                          <hr>
+                          <main>
+                          <router-outlet></router-outlet>
+                          </main>
+                        </div>
+                      </div>
             </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>

@@ -1,36 +1,49 @@
 <div class="container" style="padding:20px;">
-	<h1 style="text-align:center;">
-		<a href="/product/index"> Full Stack - Angular 10 & Laravel 8 </a>
-	</h1>
-	<hr>
+  <h1 style="text-align:center;">
+      <a> Administrador de productos </a>
+  </h1>
+  <hr>
   <main>
-  <router-outlet></router-outlet>
+      <router-outlet></router-outlet>
   </main>
+  <a href="/" style="display:block; text-align:center; margin-top:20px;">Ir a la página de inicio</a>
 </div>
+
 
 
 <section>
 
-  <div class="d-flex justify-content-between">
-    <h4>List product</h4>
-    <a routerLink="/product/create" class="btn btn-success">Create New Product</a>
-  </div>
+  <div class="container-border">
+    <div class="d-flex justify-content-between border p-3">
+        <h4>Lista de productos</h4>
+        <a routerLink="/product/create" class="btn btn-success">Create New Product</a>
+    </div>
+</div>
 
-  <br>
 
-  <table class="table ">
-    <tr>
-      <th>ID</th>
-      <th>Name</th>
-      <th width="220px">Action</th>
-    </tr>
-    <tr *ngFor="let product of products">
-      <td>{{ product.id }}</td>
-      <td>{{ product.name }}</td>
-      <td>
-        <a href="#" [routerLink]="['/product/', 'edit', product.id  ]" class="btn btn-primary">Edit</a>
-        <button type="button" (click)="deleteProduct(product.id)" class="btn btn-danger">Delete</button>
-      </td>
-    </tr>
+  
+
+<div class="container-border">
+  <table class="table border">
+    <thead class="table-dark">
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th width="220px">Acción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td>{{ product.id }}</td>
+        <td>{{ product.name }}</td>
+        <td>
+          <a href="#" [routerLink]="['/product/', 'edit', product.id ]" class="btn btn-primary">Editar</a>
+          <button type="button" (click)="deleteProduct(product.id)" class="btn btn-danger">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
   </table>
+</div>
+
+
 </section>
