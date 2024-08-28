@@ -1,12 +1,20 @@
-
-
 .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-top: 20px; /* Ajustar para dejar espacio entre navbar y contenido */
-  }
-  .card{
-    margin-bottom: 40px;
-  
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.card {
+  width: 300px; /* Hacer que la tarjeta ocupe el 100% del ancho del contenedor de la columna */
+  max-height: 500px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 15px; /* Añadir margen en la parte inferior para separar las filas */
+}
+
+.card img {
+  width: 300px; /* Asegurarse de que la imagen ocupe el 100% del ancho de la tarjeta */
+  height: 300px; /* Ajuste automático de la altura para mantener la proporción */
+}

@@ -9,18 +9,19 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   styleUrls: ['./create.component.css']
 })
 export class CreateComponent implements OnInit {
-
+  image_ini: string | ArrayBuffer | null = null;
   form: FormGroup;
 
   constructor(
     public productService: ProductService,
+    
     private router: Router
   ) { }
 
   ngOnInit(): void {
 
     this.form = new FormGroup({
-
+        id: new FormControl('', [Validators.required]),
         name: new FormControl('', [Validators.required, Validators.pattern('^[a-zA-ZÁáÀàÉéÈèÍíÌìÓóÒòÚúÙùÑñüÜ \-\']+')]),
         price: new FormControl('', [Validators.required, Validators.pattern("^[0-9]*$")]),
         price_offer: new FormControl('', [Validators.required, Validators.pattern("^[0-9]*$")]),
@@ -35,7 +36,7 @@ export class CreateComponent implements OnInit {
         color: new FormControl('', [Validators.required]),
         offer_enable: new FormControl('', [Validators.required]),
         image_ini: new FormControl('', [Validators.required]),
-        carrusel: new FormControl('', [Validators.required]),
+        carrousel_num: new FormControl('', [Validators.required]),
         image_1: new FormControl('', [Validators.required]),
         image_2: new FormControl('', [Validators.required]),
         image_3: new FormControl('', [Validators.required]),
@@ -46,6 +47,28 @@ export class CreateComponent implements OnInit {
     });
 
   }
+  onFileSelected(event: any, controlName: string) {
+    const file = event.target.files[0];
+    if (file) {
+      this.convertToBase64(file).then(base64Image => {
+        this.form.patchValue({
+          [controlName]: base64Image
+        });
+      });
+    }
+  }
+
+  convertToBase64(file: File): Promise<string> {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => {
+        resolve(reader.result as string);
+      };
+      reader.onerror = error => reject(error);
+    });
+  }
+
   offerEnableChanged() {
     const offerEnableControl = this.form.get('offer_enable');
     const priceOfferControl = this.form.get('price_offer');
@@ -61,7 +84,7 @@ export class CreateComponent implements OnInit {
   }
 
   carruselChanged() {
-    const carruselControl = this.form.get('carrusel');
+    const carruselControl = this.form.get('carrousel_num');
     const imageSecondControl = this.form.get('image_2');
     const imageThirdControl = this.form.get('image_3');
     const imageFourthControl = this.form.get('image_4');

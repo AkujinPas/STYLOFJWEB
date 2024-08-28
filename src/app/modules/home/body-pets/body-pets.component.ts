@@ -17,4 +17,8 @@ export class BodyPetsComponent implements OnInit {
       console.log(this.products);
     })
   }
+  filterProducts(product: any, category: string): boolean {
+    return product.category === category;
+    // Puedes agregar más condiciones aquí
+  }
 }

@@ -1,4 +1,5 @@
 export interface Product {
+carrousel_num: any;
     id: number;
     name: string;
     price: number;

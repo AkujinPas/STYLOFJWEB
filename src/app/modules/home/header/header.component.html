@@ -4,30 +4,18 @@
       <th scope="col"><p>ENVIO GRATUITO TODAS LAS ORDENES APARTIR DE $2,700.00</p></th>
       <th scope="col">
         <div class="nav justify-content-center">
-          <li class="nav-item">
-              <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                <button class="btn btn-outline-success" type="submit">Buscar</button>
-              </form>
-          </li>
-          <div class="nav-inicio">
-            <li class="btn btn-primary" class="nav-item" data-bs-toggle="modal" data-bs-target="#exampleModal1">
-              <a class="nav-link" href="#">Iniciar Sesion</a>
-            </li>
+          <div class="nav-item" >
+            <a class="nav-link" href="#"><app-inicio-sesion></app-inicio-sesion></a>
           </div>
+          <button type="button" class="btn btn-secondary">Carrito</button>
           <div class="nav carrito" (click)="onToggleCart()">
-            <li class="btn btn-primary" class="nav-item" data-bs-toggle="modal" data-bs-target="#exampleModal3">
-              <a class="nav-link" href="#">Carrito</a>
-            </li>
-            <div class="nav-carrito-items">
-              <p>0</p>
-            </div>
           </div>
-        </div>  
+        </div>
       </th>
     </tr>
   </thead>
 </table>
+
 
 <div class="container">
   <ul class="nav justify-content-center">
@@ -39,12 +27,9 @@
 <div class="container">
   <div class="categories-container">
     <ul class="nav justify-content-center">
-      <nav>
         <div class="nav nav-tabs" id="nav-tab" role="tablist">
           <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
             type="button" role="tab" aria-controls="nav-home" aria-selected="true">Inicio</button>
-          <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-nove" type="button"
-            role="tab" aria-controls="nav-nove" aria-selected="false">Novedades</button>
           <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-calz" type="button"
             role="tab" aria-controls="nav-calz" aria-selected="false">Calzado</button>
           <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-mobo" type="button"
@@ -55,20 +40,21 @@
             role="tab" aria-controls="nav-hogar" aria-selected="false">Hogar</button>
           <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-moda" type="button"
             role="tab" aria-controls="nav-moda" aria-selected="false">Moda</button>
-          <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-depo" type="button"
-            role="tab" aria-controls="nav-depo" aria-selected="false">Deportes</button>
           <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-masc" type="button"
             role="tab" aria-controls="nav-masc" aria-selected="false">Mascotas</button>
           <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-libros" type="button"
             role="tab" aria-controls="nav-libros" aria-selected="false">Libros</button>
+            <form class="d-flex justify-content-center" role="search" id="searchForm">
+              <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar" id="searchInput">
+              <button class="btn btn-outline-success" type="submit" id="searchButton">Buscar</button>
+            </form>
+            
+            
+            
         </div>
-      </nav>
       <div class="tab-content" id="nav-tabContent">
         <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
           <app-body-home></app-body-home>
-        </div>
-        <div class="tab-pane fade" id="nav-nove" role="tabpanel" aria-labelledby="nav-nove-tab">
-        <app-body-news></app-body-news>
         </div>
         <div class="tab-pane fade" id="nav-calz" role="tabpanel" aria-labelledby="nav-calz-tab">
           <app-body-shoes></app-body-shoes>
@@ -85,9 +71,6 @@
         <div class="tab-pane fade" id="nav-moda" role="tabpanel" aria-labelledby="nav-moda-tab">
           <app-body-fashion></app-body-fashion>
         </div>
-        <div class="tab-pane fade" id="nav-depo" role="tabpanel" aria-labelledby="nav-depo-tab">
-          <app-body-sports></app-body-sports>
-        </div>
         <div class="tab-pane fade" id="nav-masc" role="tabpanel" aria-labelledby="nav-masc-tab">
           <app-body-pets></app-body-pets>
         </div>
@@ -98,3 +81,21 @@
     </ul>
   </div>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var form = document.getElementById('searchForm');
+    var input = document.getElementById('searchInput');
+    var button = document.getElementById('searchButton');
+
+    // Deshabilitar el formulario
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevenir el envío del formulario
+    });
+
+    // Deshabilitar el botón
+    button.addEventListener('click', function(event) {
+      event.preventDefault(); // Prevenir la acción predeterminada del botón
+    });
+  });
+</script>
