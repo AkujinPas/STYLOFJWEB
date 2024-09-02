@@ -6,21 +6,31 @@ product-card {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.product-card img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 10px;
+.product-card .carousel-inner img {
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
 }
+
 
 .product-name {
-  font-size: 1.25rem;
-  font-weight: bold;
+  font-size: 1.1rem;
+  font-weight: 600;
   margin: 8px 0;
+  text-align: center;
 }
 
-.product-price, .product-brand, .product-fabric, .product-size {
+.product-price {
+  color: #43bd2a; 
+  font-size: 1.1rem; 
+  font-weight: bold; 
+  margin: 5px 0; 
+  text-align: center;
+}
+
+.product-brand, .product-fabric, .product-size {
   color: #333;
-  font-size: 0.9rem; /* Reduce el tamaño de la fuente */
+  font-size: 1.0rem; 
   font-weight: 500;
-  margin: 3px 0; /* Reduce el margen para ahorrar espacio */
+  margin: 3px 0; 
 }

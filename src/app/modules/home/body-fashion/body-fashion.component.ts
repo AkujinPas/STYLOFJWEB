@@ -8,14 +8,16 @@ import { Component } from '@angular/core';
 export class BodyFashionComponent {
   products = [
     { 
+      id: 1,
       name: 'Blusa beige con flores', 
       price: 29.99, 
-      image: 'assets/imagenes/fashion/Blusa-beige-flores.jpg',
+      image: 'assets/imagenes/fashion/Blusa-beige-flores.jpg', 
       brand: 'Marca: Zara', 
       fabric: 'Tela: Algodón', 
       size: 'Talla: M' 
     },
     { 
+      id: 2,
       name: 'Blusa aqua bordada', 
       price: 39.99, 
       image: 'assets/imagenes/fashion/Blusa-bordado-aqua-frente.jpg',
@@ -24,6 +26,7 @@ export class BodyFashionComponent {
       size: 'Talla: L' 
     },
     { 
+      id: 3,
       name: 'Camisa larga tropical', 
       price: 49.99, 
       image: 'assets/imagenes/fashion/Camisa-larga-azul-frente.jpg',
@@ -32,6 +35,7 @@ export class BodyFashionComponent {
       size: 'Talla: S' 
     },
     { 
+      id:4,
       name: 'Jumper con estampado floral', 
       price: 49.99, 
       image: 'assets/imagenes/fashion/Jumper-estampado-floral.jpg',
@@ -40,7 +44,8 @@ export class BodyFashionComponent {
       size: 'Talla: M' 
     },
     { 
-      name: 'Jumper con estampado floral rosa', 
+      id:5,
+      name: 'Jumper estampado rosa', 
       price: 49.99, 
       image: 'assets/imagenes/fashion/Jumper-flores-frente.jpg',
       brand: 'Marca: H&M', 
@@ -48,6 +53,7 @@ export class BodyFashionComponent {
       size: 'Talla: M' 
     },
     { 
+      id:6,
       name: 'Overol de mezclilla', 
       price: 29.99, 
       image: 'assets/imagenes/fashion/Overol-mezclilla-claro.jpg',
@@ -56,6 +62,7 @@ export class BodyFashionComponent {
       size: 'Talla: L' 
     },
     { 
+      id:7,
       name: 'Overol de mezclilla azul', 
       price: 29.99, 
       image: 'assets/imagenes/fashion/Overol-mezclilla-oscuro.jpg',
@@ -64,6 +71,7 @@ export class BodyFashionComponent {
       size: 'Talla: L' 
     },
     { 
+      id:8,
       name: 'Vestido ajustado color lila', 
       price: 29.99, 
       image: 'assets/imagenes/fashion/Vestido-ajustado-lila.jpg',
@@ -72,6 +80,7 @@ export class BodyFashionComponent {
       size: 'Talla: S' 
     },
     { 
+      id:9,
       name: 'Vestido ajustado color rojo', 
       price: 29.99, 
       image: 'assets/imagenes/fashion/Vestido-ajustado-rojo-frente.jpg',
@@ -80,6 +89,7 @@ export class BodyFashionComponent {
       size: 'Talla: M' 
     },
     { 
+      id:10,
       name: 'Vestido azul cielo', 
       price: 29.99, 
       image: 'assets/imagenes/fashion/Vestido-azul-cielo-frente.jpg',
@@ -88,6 +98,7 @@ export class BodyFashionComponent {
       size: 'Talla: M' 
     },
     { 
+      id:11,
       name: 'Vestido corto color Beige', 
       price: 29.99, 
       image: 'assets/imagenes/fashion/Vestido-beige-corto-frente.jpg',
@@ -96,7 +107,8 @@ export class BodyFashionComponent {
       size: 'Talla: M' 
     },
     { 
-      name: 'Vestido con estampado de cuadros', 
+      id:12,
+      name: 'Vestido estampado de cuadros', 
       price: 29.99, 
       image: 'assets/imagenes/fashion/Vestido-cuadros-frente.jpg',
       brand: 'Marca: Zara', 
@@ -104,6 +116,7 @@ export class BodyFashionComponent {
       size: 'Talla: L' 
     },
     { 
+      id:13,
       name: 'Vestido multicolor', 
       price: 29.99, 
       image: 'assets/imagenes/fashion/Vestido-estampado-colores-frente.jpg',
@@ -112,6 +125,7 @@ export class BodyFashionComponent {
       size: 'Talla: S' 
     },
     { 
+      id:14,
       name: 'Vestido con cuadros azul', 
       price: 29.99, 
       image: 'assets/imagenes/fashion/Vestido-estampado-cuadros-frente.jpg',
@@ -120,6 +134,7 @@ export class BodyFashionComponent {
       size: 'Talla: L' 
     },
     { 
+      id:15,
       name: 'Vestido estampado de hoja', 
       price: 29.99, 
       image: 'assets/imagenes/fashion/Vestido-estampado-verde-hojas.jpg',
@@ -128,6 +143,7 @@ export class BodyFashionComponent {
       size: 'Talla: M' 
     },
     { 
+      id:16,
       name: 'Vestido largo gris estampado', 
       price: 29.99, 
       image: 'assets/imagenes/fashion/Vestido-gris-estampado-largo.jpg',
