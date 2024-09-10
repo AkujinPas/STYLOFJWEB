@@ -5,15 +5,9 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { HeaderComponent } from './header/header.component';
 import { BodyAboutUsComponent } from './body-about-us/body-about-us.component';
-import { BodyAccesoriesComponent } from './body-accesories/body-accesories.component';
-import { BodyBagsComponent } from './body-bags/body-bags.component';
-import { BodyBooksComponent } from './body-books/body-books.component';
 import { BodyHomeComponent } from './body-home/body-home.component';
-import { BodyHousewardComponent } from './body-houseward/body-houseward.component';
 import { BodyFashionComponent } from './body-fashion/body-fashion.component';
 import { BodyContactComponent } from './body-contact/body-contact.component';
-import { BodyPetsComponent } from './body-pets/body-pets.component';
-import { BodyShoesComponent } from './body-shoes/body-shoes.component';
 import { BodyShoppingCartComponent } from './body-shopping-cart/body-shopping-cart.component';
 import { BodyOfertasComponent } from './body-ofertas/body-ofertas.component';
 import { BodyViewProductComponent } from './body-view-product/body-view-product.component';
@@ -34,15 +28,9 @@ import { PagoTarjetaComponent } from './pago-tarjeta/pago-tarjeta.component';
     FooterComponent,
     HeaderComponent,
     BodyAboutUsComponent,
-    BodyAccesoriesComponent,
-    BodyBagsComponent,
-    BodyBooksComponent,
     BodyHomeComponent,
-    BodyHousewardComponent,
     BodyFashionComponent,
     BodyContactComponent,
-    BodyPetsComponent,
-    BodyShoesComponent,
     BodyShoppingCartComponent,
     BodyOfertasComponent,
     BodyViewProductComponent,
