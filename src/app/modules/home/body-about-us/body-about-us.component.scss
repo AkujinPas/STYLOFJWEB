@@ -1,59 +1,63 @@
 .custom-container-1, .custom-container-2, .custom-container-3 {
-    margin-bottom: 30px; /* Espacio abajo del contenedor */
-  }
-  
-  .image-container {
-    position: relative;
-  }
-  
-  .image {
-    width: 100%; /* Establece el ancho máximo del contenedor */
-    height: auto; /* Establece la altura automática para mantener la proporción original */
-    object-fit: cover; /* Ajusta la imagen para cubrir todo el contenedor sin distorsionar */
-  }
-  
-  .overlay {
-    position: absolute;
-    top: 0;
-    width: 50%; /* Cubrir el 50% del ancho del contenedor */
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Transparencia */
-    padding: 20px;
-    box-sizing: border-box;
-    color: #fff; /* Color del texto */
-    text-align: center; /* Centrar horizontalmente */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centrar verticalmente */
-    font-family: "Montserrat", sans-serif; /* Tipo de letra */
-  }
-  
-  .overlay h2 {
-    font-size: 2.4vw; /* Tamaño del título responsivo (disminuido en 1 punto) */
-    font-weight: bold;
-    margin-bottom: 5vh; /* Espacio entre el título y el texto */
-  }
-  
-  .overlay p {
-    margin: 0 5%; /* Margen horizontal responsivo */
-    font-size: 1.4vw; /* Tamaño del texto responsivo (disminuido en 1 punto) */
-    margin-bottom: 2vh; /* Margen vertical responsivo */
-  }
-  
-  /* Estilos específicos para cada contenedor */
-  .custom-container-1 .overlay {
-    background-color: rgba(0, 0, 0, 0.395);
-    left: 0; /* Alineado a la izquierda */
-  }
-  
-  .custom-container-2 .overlay {
-    background-color: rgba(0, 0, 0, 0.473);
-    right: 0; /* Alineado a la derecha */
-    left: auto; /* Desactivar alineación a la izquierda */
-  }
-  
-  .custom-container-3 .overlay {
-    background-color: rgba(0, 0, 0, 0.356);
-    left: 0; /* Alineado a la izquierda */
-  }
-  
+  margin-bottom: 30px; /* Espacio abajo del contenedor */
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 500px; /* Establecemos una altura fija para todas las imágenes */
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen para que cubra todo el contenedor sin distorsión */
+  object-position: top center; /* Alinea la imagen en la parte superior y centrada horizontalmente */
+
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  width: 50%; /* Cubrir el 50% del ancho del contenedor */
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Transparencia */
+  padding: 20px;
+  box-sizing: border-box;
+  color: #fff; /* Color del texto */
+  text-align: center; /* Centrar horizontalmente */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centrar verticalmente */
+  font-family: "Montserrat", sans-serif; /* Tipo de letra */
+}
+
+.overlay h2 {
+  font-size: 2.4vw; /* Tamaño del título responsivo */
+  font-weight: bold;
+  margin-bottom: 5vh; /* Espacio entre el título y el texto */
+}
+
+.overlay p {
+  margin: 0 5%; /* Margen horizontal responsivo */
+  font-size: 1.4vw; /* Tamaño del texto responsivo */
+  margin-bottom: 2vh; /* Margen vertical */
+}
+
+/* Estilos específicos para cada contenedor */
+.custom-container-1 .overlay {
+  background-color: rgba(0, 0, 0, 0.395);
+  left: 0; /* Alineado a la izquierda */
+}
+
+.custom-container-2 .overlay {
+  background-color: rgba(0, 0, 0, 0.473);
+  right: 0; /* Alineado a la derecha */
+  left: auto; /* Desactivar alineación a la izquierda */
+}
+
+.custom-container-3 .overlay {
+  background-color: rgba(0, 0, 0, 0.356);
+  left: 0; /* Alineado a la izquierda */
+}
