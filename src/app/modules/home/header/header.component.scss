@@ -1,0 +1,61 @@
+
+  /* Colores para las categorías activas e inactivas */
+  .nav-link {
+    color: #121213; /* Color inactivo */
+    border: 1px solid transparent;
+    position: relative; 
+  }
+  
+  .nav-link:hover {
+    color: #495057; /* Color al pasar el mouse */
+  }
+  
+  .nav-link.active {
+    color: #EEB000; /* Color activo */
+    background-color: #f8f9fa; /* Fondo activo */
+    font-weight: bold;
+  }
+  
+  .nav-link.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 3px;
+    background-color: #EEB000; /* Color de la línea */
+  }
+  
+  /* Estilos para el botón "Carrito" */
+ 
+  
+  /* Ajuste de tamaño para los botones de "Inicio de sesión" y "Carrito" */
+  .nav-item a {
+    font-weight: bold; /* Texto en negrita */
+  }
+
+  /* Ajustes adicionales */
+  .table th {
+    vertical-align: middle;
+  }
+  
+  .navbar-brand img {
+    max-height: 220px; /* Ajuste dinámico según el tamaño definido */
+    object-fit: contain;
+  }
+  
+  .nav-tabs {
+    border-bottom: 2px solid #dee2e6;
+    margin-bottom: 25px; /* margen debajo de las categorías */
+  }
+  
+  .categories-container {
+    margin-top: 20px;
+  }
+  
+  /* Contenedor para los botones */
+  .nav {
+    display: flex;
+    align-items: center;
+  }
+  
