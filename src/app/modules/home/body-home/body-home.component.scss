@@ -1,128 +1,99 @@
-.custom-container-1 { /* Estilos para el Contenedor 1 */
-    margin-bottom: 30px;/* espacio abajo del contenedor*/
-    .image-container {
-        position: relative;
-      }      
-      .image {
-        width: 100%; /* Establece el ancho máximo del contenedor */
-        height: auto; /* Establece la altura automática para mantener la proporción original */
-        object-fit: cover; /* Ajusta la imagen para cubrir todo el contenedor sin distorsionar */
-      }
-      .overlay {
-        position: absolute;
-        top: 0;
-        left: 0; /* alineado a la izquierda */
-        width: 50%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.295); /* transparencia */
-        padding: 20px;
-        box-sizing: border-box;
-        color: #fff; /*  color del texto */
-        text-align: center; /* Centrar horizontalmente */
-        display: flex;
-        flex-direction: column;
-        justify-content: center; /* Centrar verticalmente */
-        font-family: "Montserrat", sans-serif; /*  tipo de letra  */
-      }      
-      .overlay h2 {
-        font-size: 35px; /* tamaño del titulo */
-        font-weight: bold; 
-        margin-bottom: 50px; /* espacio entre el título y el texto */
-      }      
-      .overlay p {
-        margin: 0 30px; /* Margen horizontal */
-        font-size: 25px;
-        margin-bottom: 10px;
-      }  
-  }
-  
-  
-  .custom-container-2 { /* Estilos para el Contenedor 2 */
-    margin-bottom: 30px; /* espacio abajo del contenedor*/
-    .image-container {
-        position: relative;
-      }
-      
-      .image {
-        width: 100%; /* Establece el ancho máximo del contenedor */
-        height: auto; /* Establece la altura automática para mantener la proporción original */
-        object-fit: cover; /* Ajusta la imagen para cubrir todo el contenedor sin distorsionar */
-      }
-      
-      .overlay {
-        position: absolute;
-        top: 0;
-        right: 0; /* alineado a la derecha */
-        width: 50%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.473); /* transparencia */
-        padding: 20px;
-        box-sizing: border-box;
-        color: #fff; /*  color del texto */
-        text-align: center; /* Centrar horizontalmente */
-        display: flex;
-        flex-direction: column;
-        justify-content: center; /* Centrar verticalmente */
-        font-family: "Montserrat", sans-serif; /*  tipo de letra  */
-      }
-      
-      .overlay h2 {
-        font-size: 35px; /* tamaño del titulo */
-        font-weight: bold; 
-        margin-bottom: 50px; /* espacio entre el título y el texto */
-      }
-      
-      .overlay p {
-        margin: 0 30px; /* Margen horizontal */
-        font-size: 25px;
-        margin-bottom: 10px;
-      }
-    
-  }
-  
-  
-  .custom-container-3 { /* Estilos para el Contenedor 3 */
-    margin-bottom: 30px; /* espacio abajo del contenedor*/
-    .image-container {
-        position: relative;
-      }
-      
-      .image {
-        width: 100%; /* Establece el ancho máximo del contenedor */
-        height: auto; /* Establece la altura automática para mantener la proporción original */
-        object-fit: cover; /* Ajusta la imagen para cubrir todo el contenedor sin distorsionar */
-      }
-      
-      .overlay {
-        position: absolute;
-        top: 0;
-        left: 0; /* alineado a la izquierda */
-        width: 50%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.356); /* transparencia */
-        padding: 20px;
-        box-sizing: border-box;
-        color: #fff; /*  color del texto */
-        text-align: center; /* Centrar horizontalmente */
-        display: flex;
-        flex-direction: column;
-        justify-content: center; /* Centrar verticalmente */
-        font-family: "Montserrat", sans-serif; /*  tipo de letra  */
-      }
-      
-      .overlay h2 {
-        font-size: 35px; /* tamaño del titulo */
-        font-weight: bold; 
-        margin-bottom: 50px; /* espacio entre el título y el texto */
-      }
-      
-      .overlay p {
-        margin: 0 30px; /* Margen horizontal */
-        font-size: 25px;
-        margin-bottom: 10px;
-      }
-    
-  }
-  
+.custom-container-1, .custom-container-2 {
+  max-width: 1200px; /* Asegura que el ancho máximo de ambos contenedores sea igual */
+  margin: 0 auto;
+}
 
-  
+.margin-space {
+  height: 50px; /* Ajusta el tamaño del margen como lo desees */
+}
+
+.title-text {
+  font-family: 'Arial', sans-serif;
+  font-style: italic;
+ 
+  margin-bottom: 20px;
+}
+
+.image-container {
+  position: relative;
+  width: 100%; /* Asegura que la imagen ocupe el mismo ancho que el carrusel */
+  height: 450px; /* Altura fija para las imágenes */
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen para que cubra todo el contenedor sin distorsión */
+  object-position: top center; /* Posiciona la imagen en el centro superior */
+}
+
+.text-overlay { //conf del titulo
+  font-family: 'Arial', sans-serif;
+  font-style: italic;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: transparent;
+  color: #080303;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+}
+
+.text-paragraph-1 { //conf descripcion
+  font-family: 'Arial', sans-serif;
+  font-style: italic;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.text-paragraph-2 { //lin de saber mas
+  font-family: 'Arial', sans-serif;
+  font-style: italic;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.text-paragraph-2 a {
+  color: #141735;
+  text-decoration: underline;
+  font-family: 'Arial', sans-serif;
+  font-style: italic;
+  font-size: 16px;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 500px; /* Ajusta la altura del carrusel */
+  object-fit: cover;
+}
+
+/* Estilos para alinear los iframes en la misma línea */
+.iframe-container {
+  display: flex; /* Utiliza flexbox para alinear los iframes en línea */
+  justify-content: center; /* Centra los iframes horizontalmente */
+  align-items: flex-start; /* Alinea los iframes en la parte superior */
+  gap: 20px; /* Espacio entre los iframes (ajusta según sea necesario) */
+}
+
+.map-container {
+  flex: 1; /* Permite que el contenedor del mapa ocupe el espacio restante */
+  height: 500px; /* Altura fija */
+}
+
+.facebook-container {
+  width: 400px; /* Ancho fijo para el iframe de Facebook */
+  height: 500px; /* Altura fija */
+}
+
+/* Ajusta el tamaño del contenedor según el ancho disponible */
+.iframe-container iframe {
+  width: 100%;
+  height: 100%;
+}
