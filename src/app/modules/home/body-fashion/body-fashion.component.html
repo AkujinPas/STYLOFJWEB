@@ -1,24 +1,76 @@
 <div class="container">
   <div class="row">
     <div class="col-12 col-md-3 mb-4" *ngFor="let product of products">
-      <div class="product-card">
+      <div class="product-card" (click)="openModal(product)">
         <!-- Imagen del producto -->
-        <img [src]="product.image" alt="{{ product.name }}" class="img-fluid">
+        <img [src]="product.imageF" alt="{{ product.name }}" class="img-fluid">
 
         <!-- Nombre del producto -->
         <h5 class="product-name">{{ product.name }}</h5>
 
         <!-- Precio del producto -->
-        <p class="product-price">{{ product.price | currency }}</p>
+        <p class="product-price">Precio: {{ product.price | currency }}</p>
 
         <!-- Marca del producto -->
-        <p class="product-brand">{{ product.brand }}</p>
+        <p class="product-brand">Marca: {{ product.brand }}</p>
 
         <!-- Tipo de tela del producto -->
-        <p class="product-fabric">{{ product.fabric }}</p>
+        <p class="product-fabric">Tela: {{ product.fabric }}</p>
 
         <!-- Talla del producto -->
-        <p class="product-size"> {{ product.size }}</p>
+        <p class="product-size">Talla: {{ product.size }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true" [class.show]="selectedProduct" style="display: {{ selectedProduct ? 'block' : 'none' }};" (click)="closeModal()">
+    <div class="modal-dialog modal-g">
+      <div class="modal-content" (click)="$event.stopPropagation()">
+        <div class="modal-header">
+          <h5 class="modal-title" id="productModalLabel">{{ selectedProduct?.name }}</h5>
+          <button type="button" class="btn-close" aria-label="Close" (click)="closeModal()"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6">
+              <!-- Carrusel de imágenes -->
+              <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <!-- Imagen frontal -->
+                  <div class="carousel-item active">
+                    <img [src]="selectedProduct?.imageF" alt="{{ selectedProduct?.name }} - Frontal" class="img-fluid rounded mx-auto d-block">
+                  </div>
+                  <!-- Imagen trasera -->
+                  <div class="carousel-item">
+                    <img [src]="selectedProduct?.imageB" alt="{{ selectedProduct?.name }} - Posterior" class="img-fluid rounded mx-auto d-block">
+                  </div>
+                </div>
+                <!-- Controles del carrusel -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+            
+            <div class="col-md-6">
+              <!-- Detalles del producto -->
+              <h4 class="product-name">{{ selectedProduct?.name }}</h4>
+              <p class="product-price">{{ selectedProduct?.price | currency }}</p>
+              <p><b>Marca:</b> {{ selectedProduct?.brand }}</p>
+              <p><b>Tela:</b> {{ selectedProduct?.fabric }}</p>
+              <p><b>Talla:</b> {{ selectedProduct?.size }}</p>
+
+              <!-- Botón de acción -->
+              <button class="btn btn-primary btn-block mt-4">Agregar al Carrito</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
