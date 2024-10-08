@@ -9,20 +9,21 @@
 
 .th-center p {
   margin: 0;
-  color: #000000; /* Color blanco para el texto */
+  color: #000000; /* Color para el texto */
   font-size: 14px; /* Tamaño del texto */
   text-align: center; /* Centrar el texto */
   font-family: Verdana;
   font-weight: lighter;
 }
 
-/* Estilos para la franja blanca */
+/* Estilos para la franja blanca*/
 .button-bar {
   background-color: #fff; /* Fondo blanco */
   padding: 5px 0; /* Espaciado alrededor de los botones */
   transition: all 0.3s ease; /* Transición suave */
-  position: relative; /* Para el contenedor inicial */
-  z-index: 1000; /* Asegúrate de que se superponga a otros elementos */
+  position: static;
+  z-index: 10; /* Asegúrate de que se superponga a otros elementos-este afecta a la ventana emergente */
+
 }
 
 /* Clase para mantener la barra fija */
@@ -52,7 +53,7 @@
 
 /* Colores para las categorías activas e inactivas */
 .nav-link {
-  color: #121213; /* Color inactivo */
+  color: #121213; /* Color inactivo texto */
   border: transparent;
   position: relative; 
 }
@@ -78,18 +79,29 @@
 }
 
 .categories-container {
-  margin-top: 20px; /* Margen superior para las categorías */
+  margin-top: 30px; /* Margen superior para las categorías */
+  }
+
+/* Ajuste de tamaño para Inicio de sesión y carrito */
+.nav-item a,.btn-secondary {
+  margin: 0; /* Eliminar márgenes */
+  background: transparent; /* Sin fondo */
+  border: none; /* Sin borde */
+  padding: 0; /* Sin relleno */
+  margin-right: 10px;
+  
+}
+.btn-secondary:active {
+  background-color: transparent; /* Cambia el color de fondo al hacer clic*/
 }
 
-/* Ajuste de tamaño para Inicio de sesión */
-.nav-item a {
-  font-weight: lighter; /* Texto en negrita */
-}
-
-/* Ajuste de tamaño para Carrito */
-.btn-secondary {
-  font-weight: lighter; /* Negrita para el botón */
-  margin-left: 15px; /* Espacio entre los botones */
+.nav-item a img,
+.btn-secondary img {
+  width: 25px; /* Ajusta el tamaño de la imagen */
+  height: 25px; /* Ajusta el tamaño de la imagen */
+  margin: 0; /* Asegura que no haya márgenes en las imágenes */
+  vertical-align: middle; /* Alinea verticalmente la imagen */
+ 
 }
 
 /* Ajustes adicionales */
