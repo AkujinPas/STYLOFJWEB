@@ -108,39 +108,6 @@
 
 /* Ajustes adicionales */
 .navbar-brand img {
-  max-height: 220px; /* Ajuste dinámico según el tamaño definido */
+  max-height: 100px; /* Ajuste dinámico según el tamaño definido */
   object-fit: contain;
-}
-
-/* Estilo inicial para el contenedor del logo */
-.image-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%; /* Ocupa el ancho completo para centrar */
-  position: absolute;
-  top: 0;
-  height: 240px; /* Altura del contenedor del logo */
-  transition: all 0.7s ease-in-out; /* Transición suave */
-}
-
-/* Estilo inicial para el logo */
-.logo {
-  width: 200px; /* Tamaño inicial del logo */
-  height: 240px;
-  transition: all 0.7s ease-in-out; /* Transición suave */
-}
-
-/* Logo cuando se hace scroll y cambia de tamaño */
-.fixed .image-container {
-  justify-content: flex-start; /* Mover a la izquierda */
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 90px; /* Altura ajustada para el contenedor */
-}
-
-.fixed .logo {
-  width: 130px; /* Tamaño final del logo */
-  height: 90px;
 }

@@ -7,24 +7,33 @@
   </div>
 </div>
 
-<!-- Contenedor donde se reacomodará el logo y categorías -->
+<!-- Contenedor donde se reacomodará el logo y categorias -->
 <div class="container-fluid button-bar" [ngClass]="{'fixed': isFixed}">
   <div class="row flex-wrap justify-content-center align-items-center">
 
     <!-- Logo con animación -->
     <div class="col-md-auto image-container">
       <a class="navbar-brand" href="#">
-        <img src="assets/imagenes/StyloFJBoutiqueLong.png" alt="Logo Stylo" class="scale-down-tl logo">
+        <img src="assets/imagenes/StyloFJBoutiqueLong.png" alt="Logo Stylo" class="scale-down-tl">
       </a>
     </div>
+
 
     <!-- Categorías -->
     <div class="col-md-auto">
       <div class="nav nav-tabs" id="nav-tab" role="tablist">
-        <!-- Botones de categorías -->
         <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button"
           role="tab" aria-controls="nav-home" aria-selected="true">Bienvenida</button>
-        <!-- Resto de las categorías -->
+        <button class="nav-link" id="nav-novedades-tab" data-bs-toggle="tab" data-bs-target="#nav-novedades"
+          type="button" role="tab" aria-controls="nav-novedades" aria-selected="false">Novedades</button>
+        <button class="nav-link" id="nav-moda-tab" data-bs-toggle="tab" data-bs-target="#nav-moda" type="button"
+          role="tab" aria-controls="nav-moda" aria-selected="false">Dama</button>
+        <button class="nav-link" id="nav-caballero-tab" data-bs-toggle="tab" data-bs-target="#nav-caballero"
+          type="button" role="tab" aria-controls="nav-caballero" aria-selected="false">Caballero</button>
+        <button class="nav-link" id="nav-temporada-tab" data-bs-toggle="tab" data-bs-target="#nav-temporada"
+          type="button" role="tab" aria-controls="nav-temporada" aria-selected="false">Ropa de temporada</button>
+        <button class="nav-link" id="nav-quienes-somos-tab" data-bs-toggle="tab" data-bs-target="#nav-quienes-somos"
+          type="button" role="tab" aria-controls="nav-quienes-somos" aria-selected="false">¿Quiénes somos?</button>
       </div>
     </div>
 
@@ -44,5 +53,29 @@
       </div>
     </div>
 
+  </div>
+</div>
+
+<!-- Contenedor de las pestañas de contenido -->
+<div class="container">
+  <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+      <app-body-home></app-body-home>
+    </div>
+    <div class="tab-pane fade" id="nav-moda" role="tabpanel" aria-labelledby="nav-moda-tab">
+      <app-body-fashion></app-body-fashion>
+    </div>
+    <div class="tab-pane fade" id="nav-novedades" role="tabpanel" aria-labelledby="nav-novedades-tab">
+      <p>Aún no hay novedades disponibles.</p>
+    </div>
+    <div class="tab-pane fade" id="nav-caballero" role="tabpanel" aria-labelledby="nav-caballero-tab">
+      <p>Explora la moda para caballero.</p>
+    </div>
+    <div class="tab-pane fade" id="nav-temporada" role="tabpanel" aria-labelledby="nav-temporada-tab">
+      <p>Ropa de temporada disponible próximamente.</p>
+    </div>
+    <div class="tab-pane fade" id="nav-quienes-somos" role="tabpanel" aria-labelledby="nav-quienes-somos-tab">
+      <app-body-about-us></app-body-about-us>
+    </div>
   </div>
 </div>
