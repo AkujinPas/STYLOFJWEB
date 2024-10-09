@@ -1,6 +1,7 @@
-.custom-container-1, .custom-container-2 {
-  max-width: 1200px; /* Asegura que el ancho máximo de ambos contenedores sea igual */
-  margin: 0 auto;
+.custom-container-1, .custom-container-2,.container {
+  max-width: 1800px; /* Asegura que el ancho máximo de ambos contenedores sea igual */
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .margin-space {

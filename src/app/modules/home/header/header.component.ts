@@ -15,13 +15,17 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // Método para alternar la vista del carrito
   onToggleCart() {
     this.viewCart = !this.viewCart;
   }
 
-  // Método que se llamará al hacer scroll
+  // Método que se llamará al hacer scroll en la ventana
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    this.isFixed = window.pageYOffset > 0; // Cambia a true si se ha hecho scroll
+    const scrollY = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+
+    // Cambia a true si se ha hecho scroll más de 100px, ajusta este valor según sea necesario
+    this.isFixed = scrollY > 100;
   }
 }

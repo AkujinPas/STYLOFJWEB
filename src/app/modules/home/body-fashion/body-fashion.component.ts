@@ -30,7 +30,7 @@ export class BodyFashionComponent {
     },
     { 
       id:4,
-      name: 'Jumper con estampado floral', 
+      name: 'Jumper talla G, corto con estampado floral y encaje color negro', 
       price: 49.99, 
       imageF: 'assets/imagenes/fashion/Jumper-estampado-floral.jpg',
       imageB: 'assets/imagenes/fashion/Jumper-estampado-floral.jpg',

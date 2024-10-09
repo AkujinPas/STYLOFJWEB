@@ -1,7 +1,7 @@
 /* Estilos para la franja superior negra */
 .top-bar {
-  background-color: #F9E400; /* Fondo negro */
-  height: 45px; /* Ajusta la altura según sea necesario */
+  background-color: #f9e400c0; /* Fondo negro */
+  height: 42px; /* Ajusta la altura según sea necesario */
   display: flex;
   align-items: center; /* Centrar verticalmente */
   justify-content: center; /* Centrar horizontalmente */
@@ -21,10 +21,9 @@
   background-color: #fff; /* Fondo blanco */
   padding: 5px 0; /* Espaciado alrededor de los botones */
   transition: all 0.3s ease; /* Transición suave */
-  position: static;
-  z-index: 10; /* Asegúrate de que se superponga a otros elementos-este afecta a la ventana emergente */
-
-}
+  z-index: 10; /* Asegúrate de que se superponga a otros elementos->>>>>>>>>  afecta a la ventana emergente */
+  border-bottom: 1px solid rgb(229, 233, 168); /* Borde inferior gris */
+  }
 
 /* Clase para mantener la barra fija */
 .button-bar.fixed {
@@ -76,6 +75,8 @@
 .nav-tabs {
    margin-bottom: 25px; /* margen debajo de las categorías */
    border:none;
+   justify-content: center;
+    width: 100%;
 }
 
 .categories-container {
@@ -83,7 +84,8 @@
   }
 
 /* Ajuste de tamaño para Inicio de sesión y carrito */
-.nav-item a,.btn-secondary {
+.nav-item a,
+.btn-secondary {
   margin: 0; /* Eliminar márgenes */
   background: transparent; /* Sin fondo */
   border: none; /* Sin borde */
@@ -110,4 +112,35 @@
   object-fit: contain;
 }
 
+/* Estilo inicial para el contenedor del logo */
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Ocupa el ancho completo para centrar */
+  position: absolute;
+  top: 0;
+  height: 240px; /* Altura del contenedor del logo */
+  transition: all 0.7s ease-in-out; /* Transición suave */
+}
 
+/* Estilo inicial para el logo */
+.logo {
+  width: 200px; /* Tamaño inicial del logo */
+  height: 240px;
+  transition: all 0.7s ease-in-out; /* Transición suave */
+}
+
+/* Logo cuando se hace scroll y cambia de tamaño */
+.fixed .image-container {
+  justify-content: flex-start; /* Mover a la izquierda */
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 90px; /* Altura ajustada para el contenedor */
+}
+
+.fixed .logo {
+  width: 130px; /* Tamaño final del logo */
+  height: 90px;
+}
