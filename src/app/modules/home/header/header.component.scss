@@ -72,12 +72,13 @@
   background-color: #EEB000; /* Color de la línea */
 }
 
+
 .nav-tabs {
-   margin-bottom: 25px; /* margen debajo de las categorías */
    border:none;
    justify-content: center;
     width: 100%;
 }
+
 
 .categories-container {
   margin-top: 30px; /* Margen superior para las categorías */
@@ -110,4 +111,38 @@
 .navbar-brand img {
   max-height: 100px; /* Ajuste dinámico según el tamaño definido */
   object-fit: contain;
+}
+
+
+/* Esconde los dropdowns por defecto */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+}
+
+/* Muestra el dropdown principal cuando se pasa el cursor sobre el botón */
+.nav-item:hover > .dropdown-menu {
+  display: block;
+}
+
+/* Estilos para los submenús */
+.dropdown-submenu {
+  position: relative;
+}
+
+/* Muestra los submenús cuando se pasa el cursor sobre el item del menú */
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+  left: 100%;
+  top: 0;
+  margin-top: -1px;
+}
+
+.dropdown-submenu .dropdown-menu {
+  position: absolute;
+}
+
+/* Desaparición suave del menú cuando el cursor se mueve fuera */
+.dropdown-menu {
+  transition: display 0.3s ease;
 }
