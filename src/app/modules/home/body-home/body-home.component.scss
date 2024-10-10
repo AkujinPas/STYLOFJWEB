@@ -11,15 +11,14 @@
 .title-text {
   font-family: 'Arial', sans-serif;
   font-style: italic;
- 
-  margin-bottom: 20px;
+   margin-bottom: 20px;
 }
 
 .image-container {
-  position: relative;
-  width: 100%; /* Asegura que la imagen ocupe el mismo ancho que el carrusel */
-  height: 450px; /* Altura fija para las imágenes */
-  overflow: hidden;
+  display: flex; /* Usar flexbox para alinear las imágenes */
+  justify-content: space-between; /* Espacio entre las imágenes */
+  height: 400px; /* Mantener la altura actual de las imágenes */
+  overflow: hidden; /* Ocultar cualquier contenido que exceda el contenedor */
 }
 
 .image {
