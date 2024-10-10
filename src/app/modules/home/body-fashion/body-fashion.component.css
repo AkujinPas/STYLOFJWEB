@@ -1,4 +1,8 @@
 /* Contenedor de tarjetas */
+.container {
+  margin-top: 15px; /* Margen superior de 10px */
+}
+
 .product-grid {
   display: flex; /* Cambiar a flexbox para igualar la altura de las tarjetas */
   flex-wrap: wrap; /* Permitir que las tarjetas se ajusten a varias filas */
@@ -9,7 +13,7 @@
 .product-card {
   display: flex; /* Hacer que el contenedor de la tarjeta sea flexible */
   flex-direction: column; /* Colocar los elementos en columna */
-  background-color: #ffffff; /* Fondo de tarjetas*/
+  background-color: #faf7f0f6; /* Fondo de tarjetas*/
   padding: 15px;
   border-radius: 5px;
   text-align: center;
@@ -17,6 +21,7 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 100%;
   height: 100%; /* Hacer que las tarjetas ocupen el mismo alto */
+  font-size: 18px;
 }
 
 /* Para mantener la imagen con un alto máximo, pero haciendo que la tarjeta se ajuste */
@@ -34,13 +39,21 @@
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
 
-.product-name {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin: 8px 0;
-  text-align: center;
-  flex-grow: 1; /* Permitir que el nombre del producto expanda su espacio si es necesario */
+.modal .product-name {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Máximo de 3 líneas */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 18px;
+  max-width: 100%;
 }
+
+.product-name{
+  margin-top: 8px;
+  font-size: 18px;
+  }
+
 
 .product-price {
   color: #43bd2a; 
@@ -50,7 +63,6 @@
   text-align: center;
 }
 
-/* Otras clases (marca, tela, talla) se mantienen igual... */
 
 /* Responsivo */
 @media (max-width: 1024px) {

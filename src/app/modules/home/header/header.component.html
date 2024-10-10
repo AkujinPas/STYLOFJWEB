@@ -1,4 +1,4 @@
-<!-- Contenedor de la franja superior negra -->
+<!-- Contenedor de la franja superior -->
 <div class="container-fluid top-bar">
   <div class="row">
     <div class="col-md-12 th-center">
@@ -9,14 +9,16 @@
 
 <!-- Contenedor donde se reacomodará el logo y categorias -->
 <div class="container-fluid button-bar" [ngClass]="{'fixed': isFixed}">
-  <div class="row justify-content-center align-items-center">
+  <div class="row flex-wrap justify-content-center align-items-center">
 
     <div class="col-md-auto">
       <a class="navbar-brand" href="#">
-        <img src="assets/imagenes/StyloFJBoutiqueLong.png" alt="" width="130" height="90" style="object-fit: contain;">
+        <img src="assets/imagenes/StyloFJBoutiqueLong.png" alt="" width="135" height="95" style="object-fit: contain;">
       </a>
     </div>
 
+
+    <!-- Categorías -->
     <div class="col-md-auto">
       <div class="nav nav-tabs" id="nav-tab" role="tablist">
         <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button"
@@ -58,31 +60,29 @@
           type="button" role="tab" aria-controls="nav-temporada" aria-selected="false">Ropa de temporada</button>
         <button class="nav-link" id="nav-quienes-somos-tab" data-bs-toggle="tab" data-bs-target="#nav-quienes-somos"
           type="button" role="tab" aria-controls="nav-quienes-somos" aria-selected="false">¿Quiénes somos?</button>
-
       </div>
     </div>
 
-    <div class="col-md-auto new-container"></div>
-<div class="col-md-auto">
-  <div class="nav">
-    <div class="nav-item">
-      <a class="nav-link" href="#" style="padding: 0; display: inline-flex; align-items: center;">
-        <app-inicio-sesion></app-inicio-sesion>
-      </a>
+    <!-- Inicio de sesión y carrito -->
+    <div class="col-md-auto new-container">
+      <div class="nav">
+        <div class="nav-item">
+          <a class="nav-link" href="#" style="padding: 0; display: inline-flex; align-items: center;">
+            <app-inicio-sesion></app-inicio-sesion>
+          </a>
+        </div>
+        <button type="button" class="btn btn-secondary" (click)="onToggleCart()"
+          style="display: flex; align-items: center; justify-content: center; padding: 10px; height: 50px;">
+          <img src="assets/imagenes/carrito.png" alt="Carrito" style="width: 25px; height: 25px;">
+        </button>
+        <div class="nav carrito"></div>
+      </div>
     </div>
-    <button type="button" class="btn btn-secondary" (click)="onToggleCart()" style="display: flex; align-items: center; justify-content: center; padding: 10px; height: 50px;">
-      <img src="assets/imagenes/carrito.png" alt="Carrito" style="width: 25px; height: 25px;">
-    </button>
-    <div class="nav carrito"></div>
-  </div>
-</div>
-
-
 
   </div>
 </div>
 
-
+<!-- Contenedor de las pestañas de contenido -->
 <div class="container">
   <div class="tab-content" id="nav-tabContent">
     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
@@ -103,6 +103,5 @@
     <div class="tab-pane fade" id="nav-quienes-somos" role="tabpanel" aria-labelledby="nav-quienes-somos-tab">
       <app-body-about-us></app-body-about-us>
     </div>
-
   </div>
 </div>

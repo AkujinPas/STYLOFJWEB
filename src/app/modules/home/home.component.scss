@@ -1,0 +1,5 @@
+/* no usar z-index porque afecta a la ventana emergente*/
+.Encabezado, .Pie-de-página {
+    position: relative; /* Para que queden en el flujo normal de la página */
+   
+}
