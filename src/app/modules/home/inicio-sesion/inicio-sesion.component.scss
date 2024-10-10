@@ -1,0 +1,11 @@
+/* Ajuste de tamaño para Inicio de sesión */
+.nav-item a {
+    padding: 0; /* Elimina el relleno */
+    margin: 0; /* Elimina el margen */
+    background: transparent; /* Sin fondo */
+    border: none; /* Sin borde */
+  }
+  
+  .nav-item a:active {
+    background-color: #d3d0d0; /* Cambia el color de fondo al hacer clic (puedes elegir el color que desees) */
+  }  

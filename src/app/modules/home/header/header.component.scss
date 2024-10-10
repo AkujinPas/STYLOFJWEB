@@ -1,70 +1,148 @@
-
-  /* Colores para las categorías activas e inactivas */
-  .nav-link {
-    color: #121213; /* Color inactivo */
-    border: 1px solid transparent;
-    position: relative; 
-  }
-  
-  .nav-link:hover {
-    color: #495057; /* Color al pasar el mouse */
-  }
-  
-  .nav-link.active {
-    color: #EEB000; /* Color activo */
-    background-color: #f8f9fa; /* Fondo activo */
-    font-weight: bold;
-  }
-  
-  .nav-link.active::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -2px;
-    height: 3px;
-    background-color: #EEB000; /* Color de la línea */
-  }
-  
-  /* Estilos para el botón "Carrito" */
- 
-  
-  /* Ajuste de tamaño para los botones de "Inicio de sesión" y "Carrito" */
-  .nav-item a {
-    font-weight: bold; /* Texto en negrita */
-  }
-
-  /* Ajustes adicionales */
-  .table th {
-    vertical-align: middle;
-  }
-  
-  .navbar-brand img {
-    max-height: 220px; /* Ajuste dinámico según el tamaño definido */
-    object-fit: contain;
-  }
-  
-  .nav-tabs {
-    border-bottom: 2px solid #dee2e6;
-    margin-bottom: 25px; /* margen debajo de las categorías */
-  }
-  
-  .categories-container {
-    margin-top: 20px;
-  }
-  
-  /* Contenedor para los botones */
-  .nav {
-    display: flex;
-    align-items: center;
-  }
-  
-
-  //ajustes dl texto superior
-.text-left {
-  margin-left: 40px; /* Ajusta este valor según sea necesario */
+/* Estilos para la franja superior negra */
+.top-bar {
+  background-color: #f9e400c0; /* Fondo negro */
+  height: 35px; /* Ajusta la altura según sea necesario */
+  display: flex;
+  align-items: center; /* Centrar verticalmente */
+  justify-content: center; /* Centrar horizontalmente */
 }
 
-.th-center {
-  vertical-align: middle; /* Centra verticalmente el contenido */
+.th-center p {
+  margin: 0;
+  color: #000000; /* Color para el texto */
+  font-size: 14px; /* Tamaño del texto */
+  text-align: center; /* Centrar el texto */
+  font-family: Verdana;
+  font-weight: lighter;
+}
+
+/* Estilos para la franja blanca*/
+.button-bar {
+  background-color: #fff; /* Fondo blanco */
+  padding: 5px 0; /* Espaciado alrededor de los botones */
+  transition: all 0.3s ease; /* Transición suave */
+  z-index: 10; /* Asegúrate de que se superponga a otros elementos->>>>>>>>>  afecta a la ventana emergente */
+  border-bottom: 1px solid rgb(229, 233, 168); /* Borde inferior gris */
+  }
+
+/* Clase para mantener la barra fija */
+.button-bar.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para mayor efecto */
+}
+
+/* Contenedor para separar los botones de las categorias*/
+.new-container {
+  margin-left: 20px; /* Espaciado a la izquierda para separar del contenedor anterior */
+  display: flex; /* Asegura que el contenido se alinee en la misma fila */
+  align-items: center; /* Centrar verticalmente */
+ 
+}
+
+/* Contenedor para los botones */
+.nav {
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+}
+
+
+/* Colores para las categorías activas e inactivas */
+.nav-link {
+  color: #121213; /* Color inactivo texto */
+  border: transparent;
+  position: relative; 
+}
+
+.nav-link.active {
+  color: #EEB000; /* Color activo */
+  font-weight: bold;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 3px;
+  background-color: #EEB000; /* Color de la línea */
+}
+
+
+.nav-tabs {
+   border:none;
+   justify-content: center;
+    width: 100%;
+}
+
+
+.categories-container {
+  margin-top: 30px; /* Margen superior para las categorías */
+  }
+
+/* Ajuste de tamaño para Inicio de sesión y carrito */
+.nav-item a,
+.btn-secondary {
+  margin: 0; /* Eliminar márgenes */
+  background: transparent; /* Sin fondo */
+  border: none; /* Sin borde */
+  padding: 0; /* Sin relleno */
+  margin-right: 10px;
+  
+}
+.btn-secondary:active {
+  background-color: transparent; /* Cambia el color de fondo al hacer clic*/
+}
+
+.nav-item a img,
+.btn-secondary img {
+  width: 25px; /* Ajusta el tamaño de la imagen */
+  height: 25px; /* Ajusta el tamaño de la imagen */
+  margin: 0; /* Asegura que no haya márgenes en las imágenes */
+  vertical-align: middle; /* Alinea verticalmente la imagen */
+ 
+}
+
+/* Ajustes adicionales */
+.navbar-brand img {
+  max-height: 100px; /* Ajuste dinámico según el tamaño definido */
+  object-fit: contain;
+}
+
+
+/* Esconde los dropdowns por defecto */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+}
+
+/* Muestra el dropdown principal cuando se pasa el cursor sobre el botón */
+.nav-item:hover > .dropdown-menu {
+  display: block;
+}
+
+/* Estilos para los submenús */
+.dropdown-submenu {
+  position: relative;
+}
+
+/* Muestra los submenús cuando se pasa el cursor sobre el item del menú */
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+  left: 100%;
+  top: 0;
+  margin-top: -1px;
+}
+
+.dropdown-submenu .dropdown-menu {
+  position: absolute;
+}
+
+/* Desaparición suave del menú cuando el cursor se mueve fuera */
+.dropdown-menu {
+  transition: display 0.3s ease;
 }

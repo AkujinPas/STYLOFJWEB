@@ -1,71 +1,107 @@
-<table class="table table-dark table-striped">
-  <thead>
-    <tr>
-      <th scope="col" class="th-center">
-        <p class="text-left">ENTREGA A DOMICILIO SOLO DISPONIBLE EN CHAMPOTÓN</p>
-      </th>
-      <th scope="col">
-        <div class="nav justify-content-center">
-          <div class="nav-item">
-            <a class="nav-link" href="#"><app-inicio-sesion></app-inicio-sesion></a>
-          </div>
-          <button type="button" class="btn btn-secondary">Carrito</button>
-          <div class="nav carrito" (click)="onToggleCart()"></div>
-        </div>
-      </th>
-    </tr>
-  </thead>
-</table>
-
-
-
-<div class="container">
-  <ul class="nav justify-content-center">
-    <a class="navbar-brand" href="#">
-      <img src="assets/imagenes/StyloFJBoutiqueLong.png" alt="" width="300" height="165" style="object-fit: contain;">
-    </a>
-  </ul>
+<!-- Contenedor de la franja superior -->
+<div class="container-fluid top-bar">
+  <div class="row">
+    <div class="col-md-12 th-center">
+      <p class="text-left">¡Entregas a domicilio!, Disponible solo en Champotón.</p>
+    </div>
+  </div>
 </div>
 
-<div class="container">
-  <div class="categories-container">
-    <ul class="nav justify-content-center">
-      <div class="nav nav-tabs" id="nav-tab" role="tablist">
-        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
-          type="button" role="tab" aria-controls="nav-home" aria-selected="true">Bienvenida</button>
-        <button class="nav-link" id="nav-novedades-tab" data-bs-toggle="tab" data-bs-target="#nav-novedades" 
-          type="button" role="tab" aria-controls="nav-novedades" aria-selected="false">Novedades</button>
-        <button class="nav-link" id="nav-moda-tab" data-bs-toggle="tab" data-bs-target="#nav-moda" type="button"
-          role="tab" aria-controls="nav-moda" aria-selected="false">Dama</button>
-        <button class="nav-link" id="nav-caballero-tab" data-bs-toggle="tab" data-bs-target="#nav-caballero" 
-          type="button" role="tab" aria-controls="nav-caballero" aria-selected="false">Caballero</button>
-        <button class="nav-link" id="nav-temporada-tab" data-bs-toggle="tab" data-bs-target="#nav-temporada" 
-          type="button" role="tab" aria-controls="nav-temporada" aria-selected="false">Ropa de temporada</button>
-        <button class="nav-link" id="nav-quienes-somos-tab" data-bs-toggle="tab" data-bs-target="#nav-quienes-somos" 
-          type="button" role="tab" aria-controls="nav-quienes-somos" aria-selected="false">¿Quiénes somos?</button>
-        
+<!-- Contenedor donde se reacomodará el logo y categorias -->
+<div class="container-fluid button-bar" [ngClass]="{'fixed': isFixed}">
+  <div class="row flex-wrap justify-content-center align-items-center">
 
+    <div class="col-md-auto">
+      <a class="navbar-brand" href="#">
+        <img src="assets/imagenes/StyloFJBoutiqueLong.png" alt="" width="135" height="95" style="object-fit: contain;">
+      </a>
+    </div>
+
+
+    <!-- Categorías -->
+    <div class="col-md-auto">
+      <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button"
+          role="tab" aria-controls="nav-home" aria-selected="true">Inicio</button>
+        <button class="nav-link" id="nav-novedades-tab" data-bs-toggle="tab" data-bs-target="#nav-novedades"
+          type="button" role="tab" aria-controls="nav-novedades" aria-selected="false">Novedades</button>
+          <div class="nav-item dropdown" id="nav-moda-tab">
+            <button class="nav-link dropdown-toggle" id="dropdownMenuLink" data-bs-toggle="tab" data-bs-target="#nav-moda" aria-expanded="false">
+              Dama
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <!-- Tipo de ropa -->
+                  <li><a class="dropdown-item" href="#">Falda</a></li>
+                  <li><a class="dropdown-item" href="#">Shorts</a></li>
+                  <li><a class="dropdown-item" href="#">Pantalones</a></li>
+                  <li><a class="dropdown-item" href="#">Ropa de baño</a></li>
+                  <li><a class="dropdown-item" href="#">Blusa</a></li>
+                  <li><a class="dropdown-item" href="#">Vestido</a></li>
+                  <li><a class="dropdown-item" href="#">Overol</a></li>
+                  <li><a class="dropdown-item" href="#">Jumper</a></li>
+                  <li><a class="dropdown-item" href="#">Camisa</a></li>
+                  <li><a class="dropdown-item" href="#">Blusa de vestir</a></li>            
+            </ul>
+          </div>
+          
+          <div class="nav-item dropdown" id="nav-caballero-tab">
+            <button class="nav-link dropdown-toggle" id="dropdownMenuLink" data-bs-toggle="tab" data-bs-target="#nav-caballero" aria-expanded="false">
+              Caballero
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <!-- Tipo de ropa -->
+                  <li><a class="dropdown-item" href="#">Shorts</a></li>
+                  <li><a class="dropdown-item" href="#">Pantalones</a></li>
+                  <li><a class="dropdown-item" href="#">Camisa</a></li>         
+                  <li><a class="dropdown-item" href="#">Playera</a></li> 
+            </ul>
+          </div>
+        <button class="nav-link" id="nav-temporada-tab" data-bs-toggle="tab" data-bs-target="#nav-temporada"
+          type="button" role="tab" aria-controls="nav-temporada" aria-selected="false">Ropa de temporada</button>
+        <button class="nav-link" id="nav-quienes-somos-tab" data-bs-toggle="tab" data-bs-target="#nav-quienes-somos"
+          type="button" role="tab" aria-controls="nav-quienes-somos" aria-selected="false">¿Quiénes somos?</button>
       </div>
-    </ul>
-    <div class="tab-content" id="nav-tabContent">
-      <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-        <app-body-home></app-body-home>
+    </div>
+
+    <!-- Inicio de sesión y carrito -->
+    <div class="col-md-auto new-container">
+      <div class="nav">
+        <div class="nav-item">
+          <a class="nav-link" href="#" style="padding: 0; display: inline-flex; align-items: center;">
+            <app-inicio-sesion></app-inicio-sesion>
+          </a>
+        </div>
+        <button type="button" class="btn btn-secondary" (click)="onToggleCart()"
+          style="display: flex; align-items: center; justify-content: center; padding: 10px; height: 50px;">
+          <img src="assets/imagenes/carrito.png" alt="Carrito" style="width: 25px; height: 25px;">
+        </button>
+        <div class="nav carrito"></div>
       </div>
-      <div class="tab-pane fade" id="nav-moda" role="tabpanel" aria-labelledby="nav-moda-tab">
-        <app-body-fashion></app-body-fashion>
-      </div>
-      <div class="tab-pane fade" id="nav-novedades" role="tabpanel" aria-labelledby="nav-novedades-tab">
-        <p>Aún no hay novedades disponibles.</p>
-      </div>
-      <div class="tab-pane fade" id="nav-caballero" role="tabpanel" aria-labelledby="nav-caballero-tab">
-        <p>Explora la moda para caballero.</p>
-      </div>
-      <div class="tab-pane fade" id="nav-temporada" role="tabpanel" aria-labelledby="nav-temporada-tab">
-        <p>Ropa de temporada disponible próximamente.</p>
-      </div>
-      <div class="tab-pane fade" id="nav-quienes-somos" role="tabpanel" aria-labelledby="nav-quienes-somos-tab">
-        <app-body-about-us></app-body-about-us>
-      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Contenedor de las pestañas de contenido -->
+<div class="container">
+  <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+      <app-body-home></app-body-home>
+    </div>
+    <div class="tab-pane fade" id="nav-moda" role="tabpanel" aria-labelledby="nav-moda-tab">
+      <app-body-fashion></app-body-fashion>
+    </div>
+    <div class="tab-pane fade" id="nav-novedades" role="tabpanel" aria-labelledby="nav-novedades-tab">
+      <p>Aún no hay novedades disponibles.</p>
+    </div>
+    <div class="tab-pane fade" id="nav-caballero" role="tabpanel" aria-labelledby="nav-caballero-tab">
+      <p>Explora la moda para caballero.</p>
+    </div>
+    <div class="tab-pane fade" id="nav-temporada" role="tabpanel" aria-labelledby="nav-temporada-tab">
+      <p>Ropa de temporada disponible próximamente.</p>
+    </div>
+    <div class="tab-pane fade" id="nav-quienes-somos" role="tabpanel" aria-labelledby="nav-quienes-somos-tab">
+      <app-body-about-us></app-body-about-us>
     </div>
   </div>
 </div>

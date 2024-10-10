@@ -1,62 +1,156 @@
-.custom-container-1, .custom-container-2, .custom-container-3 {
-  margin-bottom: 30px; /* Espacio abajo del contenedor */
-}
-
 .image-container {
   position: relative;
-  width: 100%;
-  height: auto; /* Cambia a auto para que la altura se ajuste dinámicamente */
-  overflow: hidden;
+  margin-top: 55px;
+  margin-bottom: 45px;
+  
 }
 
+/* Clase general para las imágenes */
 .image {
-  width: 100%;
-  height: auto; /* Cambia a auto para mantener la relación de aspecto */
-  object-fit: contain; /* Ajusta la imagen para que se muestre completamente sin distorsión */
-  object-position: top center; /* Alinea la imagen en la parte superior y centrada horizontalmente */
+  width: auto; /* Permite ajustar el ancho manualmente */
+  height: auto; /* Permite ajustar la altura manualmente */
+  max-width: 100%; /* Asegura que no exceda el contenedor */
+  max-height: 500px; /* Altura máxima para mantener proporciones */
+  object-fit: cover; /* Mantiene la proporción de la imagen */
+}
+
+/* Imágenes específicas con dimensiones ajustables */
+.image-left {
+  width: 100%; /* Ajusta según tus necesidades */
+  height: 400px; /* Ajusta según tus necesidades */
+  }
+
+.image-right {
+  width: 100%; /* Ajusta según tus necesidades */
+  height: 450px; /* Ajusta según tus necesidades */
 }
 
 .overlay {
   position: absolute;
   top: 0;
-  width: 50%; /* Cubrir el 50% del ancho del contenedor */
+  left: 0;
+  width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Transparencia */
-  padding: 20px;
-  box-sizing: border-box;
-  color: #fff; /* Color del texto */
-  text-align: center; /* Centrar horizontalmente */
+  display: flex;
+  justify-content: flex-end; /* Para alinear el contenedor al lado derecho */
+  align-items: center;
+}
+
+.transparent-container {
+  width: 57%; /* Cubre el 60% de la imagen */
+  height: 100%;
+  background-color: rgba(24, 23, 23, 0.3); /* Fondo transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px; /* Borde redondeado opcional */
+}
+
+/* Estilos para los rectángulos */
+.rectangles {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centrar verticalmente */
-  font-family: "Montserrat", sans-serif; /* Tipo de letra */
+  align-items: center;
+  gap: 20px;
 }
 
-.overlay h2 {
-  font-size: 2.4vw; /* Tamaño del título responsivo */
-  font-weight: bold;
-  margin-bottom: 5vh; /* Espacio entre el título y el texto */
+/* Primer rectángulo */
+.rectangle1 {
+  width: 480px; /* Ajustado según tus dimensiones */
+  height: auto; /* El alto se ajusta según el contenido */
+  background-color: rgb(226, 225, 225);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-.overlay p {
-  margin: 0 5%; /* Margen horizontal responsivo */
-  font-size: 1.4vw; /* Tamaño del texto responsivo */
-  margin-bottom: 2vh; /* Margen vertical */
+.rectangle1 h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
-/* Estilos específicos para cada contenedor */
-.custom-container-1 .overlay {
-  background-color: rgba(0, 0, 0, 0.395);
-  left: 0; /* Alineado a la izquierda */
+.rectangle1 p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
 }
 
-.custom-container-2 .overlay {
-  background-color: rgba(0, 0, 0, 0.473);
-  right: 0; /* Alineado a la derecha */
-  left: auto; /* Desactivar alineación a la izquierda */
+/* Segundo y tercer rectángulo */
+.rectangle-row {
+  display: flex;
+  gap: 20px; /* Espacio entre los rectángulos */
 }
 
-.custom-container-3 .overlay {
-  background-color: rgba(0, 0, 0, 0.356);
-  left: 0; /* Alineado a la izquierda */
+.rectangle2 {
+  width: 250px; /* Ajustado según tus dimensiones */
+  height: auto; /* El alto se ajusta según el contenido */
+  background-color: rgb(226, 225, 225);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.rectangle3 {
+  width: 220px; /* Ajustado según tus dimensiones */
+  height: auto; /* El alto se ajusta según el contenido */
+  background-color: rgb(226, 225, 225);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.rectangle2 h3,
+.rectangle3 h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.rectangle2 p,
+.rectangle3 p {
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Márgenes y alineación para que los textos queden bien posicionados */
+.rectangle2,
+.rectangle3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Adaptabilidad en pantallas más pequeñas */
+@media (max-width: 768px) {
+  .rectangle-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rectangle1,
+  .rectangle2,
+  .rectangle3 {
+    width: 100%; /* Se adaptan al ancho completo en pantallas pequeñas */
+  }
+}
+
+/* Estilos para los títulos de las columnas */
+.column-title {
+  font-family: "cambria italic";
+  margin-top: 20px;
+  margin-bottom: 35px;
+  text-align: left;
+}
+
+/* Alineación y espacio en el contenedor de imágenes */
+.image-columns {
+  padding: 10px; /* Espacio alrededor de cada columna */
+}
+
+/* Para asegurar que la imagen dentro de cada columna no se superponga al título */
+.image-container {
+  margin-top: 20px; /* Espacio entre el título y la imagen */
+  
 }
