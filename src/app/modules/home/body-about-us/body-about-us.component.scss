@@ -71,7 +71,7 @@
 
 /* Primer rectángulo */
 .rectangle1 {
-  width: 500px; /* Ajustado según tus dimensiones */
+  width: 550px; /* Ajustado según tus dimensiones */
   height: auto; /* El alto se ajusta según el contenido */
   background-color: rgb(226, 225, 225);
   border-radius: 10px;
@@ -98,7 +98,7 @@
 }
 
 .rectangle2 {
-  width: 260px; /* Ajustado según tus dimensiones */
+  width: 295px; /* Ajustado según tus dimensiones */
   height: auto; /* El alto se ajusta según el contenido */
   background-color: rgb(226, 225, 225);
   border-radius: 10px;
@@ -108,7 +108,7 @@
 }
 
 .rectangle3 {
-  width: 220px; /* Ajustado según tus dimensiones */
+  width: 265px; /* Ajustado según tus dimensiones */
   height: auto; /* El alto se ajusta según el contenido */
   background-color: rgb(226, 225, 225);
   border-radius: 10px;
@@ -118,13 +118,13 @@
 }
 .rectangle2 h3,
 .rectangle3 h3 {
-  font-size: 20px;
+  font-size: 22px;
   margin-bottom: 10px;
 }
 
 .rectangle2 p,
 .rectangle3 p {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.4;
   margin: 0;
 }
@@ -156,15 +156,17 @@
   font-family: "cambria italic";
   margin-top: 20px;
   margin-bottom: 35px;
-  text-align: left;
+  text-align: center;
 }
 
 /* Alineación y espacio en el contenedor de imágenes */
 .image-columns {
   padding: 10px; /* Espacio alrededor de cada columna */
+  text-align: center; /* Centra el contenido dentro de cada columna */
 }
 
 /* Para asegurar que la imagen dentro de cada columna no se superponga al título */
 .image-container {
   margin-top: 20px; /* Espacio entre el título y la imagen */
+  
 }
