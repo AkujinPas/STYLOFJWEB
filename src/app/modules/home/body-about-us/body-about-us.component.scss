@@ -2,23 +2,38 @@
   position: relative;
   margin-top: 55px;
   margin-bottom: 45px;
-  
+}
+
+/* Clase para la imagen de fondo */
+.background-image {
+  width: 100%; /* Ajusta la imagen para cubrir el ancho completo del contenedor */
+  max-width: 1700px; /* Establece un máximo de 1700px */
+  height: 500px; /* Establece la altura fija */
+  object-fit:cover; /* Asegura que la imagen se ajuste al contenedor sin deformarse */
+  object-position: top;
 }
 
 /* Clase general para las imágenes */
 .image {
-  width: auto; /* Permite ajustar el ancho manualmente */
   height: auto; /* Permite ajustar la altura manualmente */
   max-width: 100%; /* Asegura que no exceda el contenedor */
   max-height: 500px; /* Altura máxima para mantener proporciones */
   object-fit: cover; /* Mantiene la proporción de la imagen */
 }
 
+/* Para asegurar que la imagen de fondo se ajuste de manera adecuada en pantallas más pequeñas */
+@media (max-width: 768px) {
+  .background-image {
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    height: auto; /* Ajusta la altura de manera proporcional */
+  }
+}
+
 /* Imágenes específicas con dimensiones ajustables */
 .image-left {
   width: 100%; /* Ajusta según tus necesidades */
   height: 400px; /* Ajusta según tus necesidades */
-  }
+}
 
 .image-right {
   width: 100%; /* Ajusta según tus necesidades */
@@ -37,7 +52,7 @@
 }
 
 .transparent-container {
-  width: 57%; /* Cubre el 60% de la imagen */
+  width: 67%; /* Cubre el 60% de la imagen */
   height: 100%;
   background-color: rgba(24, 23, 23, 0.3); /* Fondo transparente */
   display: flex;
@@ -56,7 +71,7 @@
 
 /* Primer rectángulo */
 .rectangle1 {
-  width: 480px; /* Ajustado según tus dimensiones */
+  width: 500px; /* Ajustado según tus dimensiones */
   height: auto; /* El alto se ajusta según el contenido */
   background-color: rgb(226, 225, 225);
   border-radius: 10px;
@@ -66,7 +81,7 @@
 }
 
 .rectangle1 h3 {
-  font-size: 24px;
+  font-size: 26px;
   margin-bottom: 10px;
 }
 
@@ -83,7 +98,7 @@
 }
 
 .rectangle2 {
-  width: 250px; /* Ajustado según tus dimensiones */
+  width: 260px; /* Ajustado según tus dimensiones */
   height: auto; /* El alto se ajusta según el contenido */
   background-color: rgb(226, 225, 225);
   border-radius: 10px;
@@ -152,5 +167,4 @@
 /* Para asegurar que la imagen dentro de cada columna no se superponga al título */
 .image-container {
   margin-top: 20px; /* Espacio entre el título y la imagen */
-  
 }
