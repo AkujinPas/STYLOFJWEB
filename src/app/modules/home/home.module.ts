@@ -20,6 +20,7 @@ import { InicioSesionComponent } from './inicio-sesion/inicio-sesion.component';
 import { RegistroUsuarioComponent } from './registro-usuario/registro-usuario.component';
 import { CarritoComponent } from './carrito/carrito.component';
 import { PagoTarjetaComponent } from './pago-tarjeta/pago-tarjeta.component';
+import { AnuncioinicioComponent } from './anuncioinicio/anuncioinicio.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { PagoTarjetaComponent } from './pago-tarjeta/pago-tarjeta.component';
     InicioSesionComponent,
     RegistroUsuarioComponent,
     CarritoComponent,
-    PagoTarjetaComponent
+    PagoTarjetaComponent,
+    AnuncioinicioComponent
 
   ],
   imports: [

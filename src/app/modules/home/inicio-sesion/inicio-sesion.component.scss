@@ -9,3 +9,61 @@
   .nav-item a:active {
     background-color: #d3d0d0; /* Cambia el color de fondo al hacer clic (puedes elegir el color que desees) */
   }  
+
+  .p-5 {
+    padding: 3rem !important;
+}
+
+.pb-4 {
+  padding-bottom: 1.5rem !important;
+}
+
+.border-bottom-0 {
+  border-bottom: 0 !important;
+}
+
+.modal-header {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  padding: var(--bs-modal-header-padding);
+  border-bottom: var(--bs-modal-header-border-width) solid var(--bs-modal-header-border-color);
+  border-top-left-radius: var(--bs-modal-inner-border-radius);
+  border-top-right-radius: var(--bs-modal-inner-border-radius);
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: var(--bs-modal-color);
+  pointer-events: auto;
+  background-color: var(--bs-modal-bg);
+  background-clip: padding-box;
+  border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
+  border-radius: var(--bs-modal-border-radius);
+  outline: 0;
+}
+
+.modal-dialog {
+  position: relative;
+  width: auto;
+  top: 10%;
+
+  margin: auto;
+  pointer-events: none;
+}
+
+.bg-body-secondary {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-secondary-bg-rgb), var(--bs-bg-opacity)) !important;
+}
+
+@media (min-width: 576px) {
+  .modal {
+      --bs-modal-margin: 1.75rem;
+      --bs-modal-box-shadow: var(--bs-box-shadow);
+  }
+}
+
