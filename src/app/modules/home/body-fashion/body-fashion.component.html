@@ -19,11 +19,18 @@
 
         <!-- Talla del producto -->
         <p class="product-size">Talla: {{ product.size }}</p>
+        
+        <!-- Botones alineados en la misma fila -->
+        <div class="button-container">
+          <button class="btn btn-comprar" (click)="$event.stopPropagation(); buyNow(product)">Comprar</button>
+          <button class="btn btn-carrito" (click)="$event.stopPropagation(); addToCart(product)">Añadir al Carrito</button>
+        </div>
       </div>
     </div>
   </div>
+</div>
 
- <!-- Modal -->
+<!-- Modal -->
 <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true" [class.show]="selectedProduct" style="display: {{ selectedProduct ? 'block' : 'none' }};" (click)="closeModal()">
   <div class="modal-dialog modal-g">
     <div class="modal-content" (click)="$event.stopPropagation()">
@@ -67,10 +74,16 @@
             <p><b>Talla:</b> {{ selectedProduct?.size }}</p>
 
             <!-- Botón de acción -->
-            <button class="btn btn-primary btn-block mt-4">Agregar al Carrito</button>
+            <button class="btn btn-comprar btn-block mt-4">Comprar</button>
+            <button class="btn btn-carrito btn-block mt-4">Agregar al Carrito</button>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
+
+<!-- Contenedor del mensaje de notificación -->
+<div *ngIf="showNotification" class="notification">
+  <p>{{ notificationMessage }}</p>
 </div>

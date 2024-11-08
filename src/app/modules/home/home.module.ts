@@ -21,6 +21,9 @@ import { RegistroUsuarioComponent } from './registro-usuario/registro-usuario.co
 import { CarritoComponent } from './carrito/carrito.component';
 import { PagoTarjetaComponent } from './pago-tarjeta/pago-tarjeta.component';
 import { AnuncioinicioComponent } from './anuncioinicio/anuncioinicio.component';
+import { PaymentProcessComponent } from './payment-process/payment-process.component';
+import { AddressProcessComponent } from './address-process/address-process.component';
+import { PaymentStatusComponent } from './payment-status/payment-status.component';
 
 
 @NgModule({
@@ -41,7 +44,10 @@ import { AnuncioinicioComponent } from './anuncioinicio/anuncioinicio.component'
     RegistroUsuarioComponent,
     CarritoComponent,
     PagoTarjetaComponent,
-    AnuncioinicioComponent
+    AnuncioinicioComponent,
+    PaymentProcessComponent,
+    AddressProcessComponent,
+    PaymentStatusComponent
 
   ],
   imports: [
