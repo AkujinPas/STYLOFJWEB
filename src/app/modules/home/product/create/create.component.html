@@ -5,281 +5,184 @@
     <a href="#" routerLink="/product/index" class="btn btn-primaryt">Atras</a>
   </div>
 
-  <hr/>
+  <hr />
 
-    <form [formGroup]="form" (ngSubmit)="submit()">
-
-
-
-        <div class="form-group row">
-            <div class="col-md-6 ">
-              <label for="title">Nombre:</label>
-              <input
-                formControlName="name"
-                id="name"
-                type="text"
-                class="form-control">
-            </div>
-        </div>
+  <form [formGroup]="form" (ngSubmit)="submit()">
 
 
-<!-- Offer Enable -->
-<div class="form-group row">
-  <div class="col-md-6">
-    <label for="offer_enable">Oferta activa:</label>
-    <select formControlName="offer_enable" id="offer_enable" class="form-control">
-      <option value="si">Si</option>
-      <option value="no">No</option>
-    </select>
-  </div>
-</div>
 
-<!-- Price -->
-<div class="form-group row" >
-  <div class="col-md-6">
-    <label for="price">Precio:</label>
-    <input
-      formControlName="price"
-      id="price"
-      type="number"
-      class="form-control">
-  </div>
-</div>
-
-<!-- Price Offer -->
-<div class="form-group row" *ngIf="form.get('offer_enable').value === 'si'">
-  <div class="col-md-6">
-    <label for="price_offer">Precio por oferta:</label>
-    <input
-      formControlName="price_offer"
-      id="price_offer"
-      type="number"
-      class="form-control">
-  </div>
-</div>
+    <div class="form-group row">
+      <div class="col-md-6 ">
+        <label for="title">Nombre:</label>
+        <input formControlName="name" id="name" type="text" class="form-control">
+      </div>
+    </div>
 
 
-<!-- Description -->
-<div class="form-group row">
-  <div class="col-md-6">
-    <label for="description">Descripción:</label>
-    <input
-      formControlName="description"
-      id="description"
-      type="text"
-      class="form-control">
-  </div>
-</div>
-
-<!-- Details -->
-<div class="form-group row">
-  <div class="col-md-6">
-    <label for="details">Detalles:</label>
-    <input
-      formControlName="details"
-      id="details"
-      type="text"
-      class="form-control">
-  </div>
-</div>
-
-<!-- Stock -->
-<div class="form-group row">
-  <div class="col-md-6">
-    <label for="stock">Stock:</label>
-    <input
-      formControlName="stock"
-      id="stock"
-      type="number"
-      class="form-control">
-  </div>
-</div>
-
-<!-- Category -->
-<div class="form-group row">
-  <div class="col-md-6">
-    <label for="category">Categoria:</label>
-    <select formControlName="category" id="category" class="form-control">
-      <option value="Calzado">Calzado</option>
-      <option value="Mochilas y Bolsos">Mochilas y Bolsos</option>
-      <option value="Accesorios y regalos">Accesorios y regalos</option>
-      <option value="Hogar">Hogar</option>
-      <option value="Moda">Moda</option>
-      <option value="Mascotas">Mascotas</option>
-      <option value="Libros">Libros</option>
-    </select>
-  </div>
-</div>
+    <!-- Price -->
+    <div class="form-group row">
+      <div class="col-md-6">
+        <label for="price">Precio:</label>
+        <input formControlName="price" id="price" type="number" class="form-control">
+      </div>
+    </div>
 
 
-<!-- Size Shoes -->
-<div class="form-group row" *ngIf="form.get('category').value === 'Calzado'">
-  <div class="col-md-6">
-    <label for="size_shoes">Talla de calzado:</label>
-    <input
-      formControlName="size_shoes"
-      id="size_shoes"
-      type="text"
-      class="form-control">
-  </div>
-</div>
-
-<!-- Size Fashion -->
-<div class="form-group row" *ngIf="form.get('category').value === 'Moda'">
-  <div class="col-md-6">
-    <label for="size_fashion">Talla ropa:</label>
-    <input
-      formControlName="size_fashion"
-      id="size_fashion"
-      type="text"
-      class="form-control">
-  </div>
-</div>
-
-<!-- Mark -->
-<div class="form-group row">
-  <div class="col-md-6">
-    <label for="mark">Marca:</label>
-    <input
-      formControlName="mark"
-      id="mark"
-      type="text"
-      class="form-control">
-  </div>
-</div>
-
-<!-- Model -->
-<div class="form-group row">
-  <div class="col-md-6">
-    <label for="model">Modelo:</label>
-    <input
-      formControlName="model"
-      id="model"
-      type="text"
-      class="form-control">
-  </div>
-</div>
 
 
-<!-- Color -->
-<div class="form-group row">
-  <div class="col-md-6">
-    <label for="color">Color:</label>
-    <input
-      formControlName="color"
-      id="color"
-      type="text"
-      class="form-control">
-  </div>
-</div>
+
+    <!-- Stock -->
+    <div class="form-group row">
+      <div class="col-md-6">
+        <label for="brand">Marca:</label>
+        <select formControlName="brand" id="brand" class="form-control">
+          <option value="Local">Local</option>
+          <option value="Foreign">Extranjera</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Category -->
+    <div class="form-group row">
+      <div class="col-md-6">
+        <label for="gender">Genero:</label>
+        <select formControlName="gender" id="gender" class="form-control">
+          <option value="female">Dama</option>
+          <option value="male">Caballero</option>
+        </select>
+      </div>
+    </div>
 
 
-<!-- Image Ini -->
-<div class="form-group row">
-  <div class="col-md-6">
-    <label for="image_ini">Imagen principal</label>
-    <input
-      formControlName="image_ini"
-      id="image_ini"
-      type="file"
-      (change)="onFileSelected($event, 'image_ini')"
-      class="form-control"
-      accept="image/*">
-  </div>
-</div>
+    <!-- ropa dama -->
+    <div class="form-group row" *ngIf="form.get('gender').value === 'female'">
+      <div class="col-md-6">
+        <label for="clothing_type_women">Tipo de ropa:</label>
+        <select formControlName="clothing_type_women" id="clothing_type_women" class="form-control">
+          <option value="Skirt">Falda</option>
+          <option value="Shorts">Short</option>
+          <option value="Pants">Pantalon</option>
+          <option value="Swimwear">Traje de baño</option>
+          <option value="Blouse">Blusa</option>
+          <option value="Dress">Vestido</option>
+          <option value="Overall">Overol</option>
+          <option value="Jumper">Jumper</option>
+          <option value="Shirt">Camisa</option>
+          <option value="Dress Blouse">Blusa de vestir</option>
+        </select>
+      </div>
+    </div>
 
-<div class="form-group row">
-  <div class="col-md-6">
-    <label for="carrousel_num">Imagenes para carrusel:</label>
-    <select formControlName="carrousel_num" id="carrousel_num" class="form-control" >
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-    </select>
-  </div>
-</div>
+    <!-- ropa dama -->
+    <div class="form-group row" *ngIf="form.get('gender').value === 'male'">
+      <div class="col-md-6">
+        <label for="clothing_type_men">Tipo de ropa:</label>
+        <select formControlName="clothing_type_men" id="clothing_type_men" class="form-control">
+          <option value="Shorts">Short</option>
+          <option value="Pants">Pantalon</option>
+          <option value="Dress Shirt">Camisa de vestir</option>
+          <option value="T-Shirt">Playera</option>
+        </select>
+      </div>
+    </div>    
 
-<div class="form-group row" *ngIf="form.get('carrousel_num').value >= 1">
-  <div class="col-md-6">
-    <label for="image_1">Imagen</label>
-    <input
-      formControlName="image_1"
-      id="image_1"
-      type="file"
-      class="form-control"
-      (change)="onFileSelected($event, 'image_1')"
-      accept="image/*">
-  </div>
-</div>
+    <div class="form-group row">
+      <div class="col-md-6">
+        <label for="styles_by_ocassion">De ocasión:</label>
+        <select formControlName="styles_by_ocassion" id="styles_by_ocassion" class="form-control">
+          <option value="casual">Casual</option>
+          <option value="formal">Formal</option>
+          <option value="evening wear">Ropa de noche</option>
+          <option value="sportswear">Ropa deportiva</option>
+          <option value="party wear">Ropa de fiesta</option>
+        </select>
+      </div>
+    </div>
 
-<div class="form-group row" *ngIf="form.get('carrousel_num').value >= 2">
-  <div class="col-md-6">
-    <label for="image_2">Imagen</label>
-    <input
-      formControlName="image_2"
-      id="image_2"
-      type="file"
-      class="form-control"
-      (change)="onFileSelected($event, 'image_2')"
-      accept="image/*">
-  </div>
-</div>
+    <div class="form-group row">
+      <div class="col-md-6">
+        <label for="fabric_type">Material:</label>
+        <select formControlName="fabric_type" id="fabric_type" class="form-control">
+          <option value="Cotton">Algodón</option>
+          <option value="Mixed Cotton">Mezcla de algodón</option>
+          <option value="Polyester">Poliester</option>
+          <option value="Nylon">Nylon</option>
+          <option value="Synthetic">Sintetico</option>
+          <option value="Elastane">Elastano</option>
+          <option value="Satin">Satin</option>
+          <option value="Lycra">Licra</option>
+          <option value="Denim">Denim</option>
+          <option value="Rayon">Rayon</option>
+          <option value="Lace">Encaje</option>
+          <option value="Vinyl">Vinil</option>
+        </select>
+      </div>
+    </div>
 
-<div class="form-group row" *ngIf="form.get('carrousel_num').value >= 3">
-  <div class="col-md-6">
-    <label for="image_3">Imagen</label>
-    <input
-      formControlName="image_3"
-      id="image_3"
-      type="file"
-      class="form-control"
-      (change)="onFileSelected($event, 'image_3')"
-      accept="image/*">
-  </div>
-</div>
+    <div class="form-group row">
+      <div class="col-md-6">
+        <label for="size">Talla:</label>
+        <select formControlName="size" id="size" class="form-control">
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+          <option value="XXL">XXL</option>
+          <option value="XXXL">XXXL</option>
+        </select>
+      </div>
+    </div>
 
-<div class="form-group row" *ngIf="form.get('carrousel_num').value >= 4">
-  <div class="col-md-6">
-    <label for="image_4">Imagen</label>
-    <input
-      formControlName="image_4"
-      id="image_4"
-      type="file"
-      class="form-control"
-      (change)="onFileSelected($event, 'image_4')"
-      accept="image/*">
-  </div>
-</div>
+    <div class="form-group row">
+      <div class="col-md-6">
+        <label for="sleeve">Manga:</label>
+        <select formControlName="sleeve" id="sleeve" class="form-control">
+          <option value="short">Corta</option>
+          <option value="3-4">3-4</option>
+          <option value="without">Sin manga</option>
+          <option value="large">Larga</option>
+        </select>
+      </div>
+    </div>
 
-<div class="form-group row" *ngIf="form.get('carrousel_num').value >= 5">
-  <div class="col-md-6">
-    <label for="image_5">Imagen</label>
-    <input
-      formControlName="image_5"
-      id="image_5"
-      type="file"
-      class="form-control"
-      (change)="onFileSelected($event, 'image_5')"
-      accept="image/*">
-  </div>
-</div>
+  
+    <!-- Image Ini -->
+    <div class="form-group row">
+      <div class="col-md-6">
+        <label for="image_front">Imagen Frontal</label>
+        <input formControlName="image_front" id="image_front" type="file" (change)="onFileSelected($event, 'image_front')"
+          class="form-control" accept="image/*">
+      </div>
+    </div>
 
-<!-- Image 1 to 5 -->
-<!-- ... (Repite el patrón para las imágenes 1 a 5) -->
+    <div class="form-group row">
+      <div class="col-md-6">
+        <label for="image_back">Imagen Trasera</label>
+        <input formControlName="image_back" id="image_back" type="file" (change)="onFileSelected($event, 'image_back')"
+          class="form-control" accept="image/*">
+      </div>
+    </div>
+ 
+    <div class="form-group row">
+      <div class="col-md-6">
+        <label for="availability">Disponibilidad:</label>
+        <select formControlName="availability" id="availability" class="form-control">
+          <option value="Available">Disponible</option>
+          <option value="Unavailable">No disponible</option>
+        </select>
+      </div>
+    </div>
 
-<!-- Publish Date -->
-<div class="form-group row">
-  <div class="col-md-6">
-    <label for="publish_date">Fecha de publicación:</label>
-    <input
-      formControlName="publish_date"
-      id="publish_date"
-      type="date"
-      class="form-control">
-  </div>
-</div>
-        <button class="btn btn-primary" type="submit" >Guardar</button>
-    </form>
+    <div class="form-group row">
+      <div class="col-md-6">
+        <label for="season">Temporada:</label>
+        <select formControlName="season" id="season" class="form-control">
+          <option value="Spring-summer">Primavera-Verano</option>
+          <option value="Autumn-winter">Otoño-Invierno</option>
+        </select>
+      </div>
+    </div>
+
+    <button class="btn btn-primary" type="submit">Guardar</button>
+  </form>
 </div>

@@ -1,0 +1,54 @@
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    position: relative;
+    background-color: rgb(211, 195, 16);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .close-btn:hover {
+    color: red; /* Cambia el color cuando pasas el ratón por encima */
+  }
+  .close-button {
+    background-color: black; /* Fondo negro */
+    color: white;            /* Texto blanco */
+    border: none;           /* Sin borde */
+    padding: 10px 20px;     /* Espaciado interno */
+    font-size: 16px;        /* Tamaño de fuente */
+    font-weight: bold;      /* Negrita */
+    border-radius: 5px;     /* Bordes redondeados */
+    cursor: pointer;        /* Cambia el cursor al pasar el ratón */
+    transition: background-color 0.3s; /* Transición suave */
+  }
+  
+  .close-button:hover {
+    background-color: #333; /* Color de fondo gris oscuro al pasar el ratón */
+  }
+  
