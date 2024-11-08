@@ -71,10 +71,12 @@
             <app-inicio-sesion></app-inicio-sesion>
           </a>
         </div>
-        <button type="button" class="btn btn-secondary" (click)="onToggleCart()"
-          style="display: flex; align-items: center; justify-content: center; padding: 10px; height: 50px;">
-          <img src="assets/imagenes/carrito.png" alt="Carrito" style="width: 25px; height: 25px;">
-        </button>
+        <div class="nav-item">
+          <a class="nav-link" href="#" style="padding: 0; display: inline-flex; align-items: center;">
+            <app-body-shopping-cart></app-body-shopping-cart>
+          </a>
+        </div>
+        
         <div class="nav carrito"></div>
       </div>
     </div>
