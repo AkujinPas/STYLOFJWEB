@@ -1,3 +1,4 @@
+
 import { Component, Input, OnInit } from '@angular/core';
 
 interface Product {
@@ -30,6 +31,7 @@ export class AnuncioinicioComponent implements OnInit {
   closePopup() {
     this.showPopup = false;
   }
+
 
   viewProduct() {
     // Lógica adicional si quieres redirigir o mostrar detalles del producto

@@ -8,5 +8,13 @@ import { FormControl } from '@angular/forms'
 })
 export class HomeComponent {
 
+  isModalOpen = true;
 
+  openModal() {
+    this.isModalOpen = true;
+  }
+
+  closeModal() {
+    this.isModalOpen = false;
+  }
 }

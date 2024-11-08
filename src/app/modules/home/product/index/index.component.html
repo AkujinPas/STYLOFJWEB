@@ -29,6 +29,7 @@
       <tr>
         <th>ID</th>
         <th>Nombre</th>
+        <th>Disponibilidad</th>
         <th width="220px">Acción</th>
       </tr>
     </thead>
@@ -36,6 +37,8 @@
       <tr *ngFor="let product of products">
         <td>{{ product.id }}</td>
         <td>{{ product.name }}</td>
+        <td>{{ product.availability }}</td>
+
         <td>
           <a href="#" [routerLink]="['/product/', 'edit', product.id ]" class="btn btn-primary">Editar</a>
           <button type="button" (click)="deleteProduct(product.id)" class="btn btn-danger">Eliminar</button>

@@ -21,29 +21,20 @@ export class CreateComponent implements OnInit {
   ngOnInit(): void {
 
     this.form = new FormGroup({
-        id: new FormControl('', [Validators.required]),
         name: new FormControl('', [Validators.required, Validators.pattern('^[a-zA-ZÁáÀàÉéÈèÍíÌìÓóÒòÚúÙùÑñüÜ \-\']+')]),
         price: new FormControl('', [Validators.required, Validators.pattern("^[0-9]*$")]),
-        price_offer: new FormControl('', [Validators.required, Validators.pattern("^[0-9]*$")]),
-        description: new FormControl('', [Validators.required]),
-        details: new FormControl('', [Validators.required]),
-        stock: new FormControl('', [Validators.required, Validators.pattern("^[0-9]*$")]),
-        category: new FormControl('', [Validators.required]),
-        mark: new FormControl('', [Validators.required]),
-        model: new FormControl('', [Validators.required]),
-        size_shoes: new FormControl('', [Validators.required]),
-        size_fashion: new FormControl('', [Validators.required]),
-        color: new FormControl('', [Validators.required]),
-        offer_enable: new FormControl('', [Validators.required]),
-        image_ini: new FormControl('', [Validators.required]),
-        carrousel_num: new FormControl('', [Validators.required]),
-        image_1: new FormControl('', [Validators.required]),
-        image_2: new FormControl('', [Validators.required]),
-        image_3: new FormControl('', [Validators.required]),
-        image_4: new FormControl('', [Validators.required]),
-        image_5: new FormControl('', [Validators.required]),
-        publish_date: new FormControl('', [Validators.required])
-
+        brand: new FormControl('', [Validators.required]),
+        gender: new FormControl('', [Validators.required]),
+        clothing_type_men: new FormControl('', [Validators.required]),
+        clothing_type_women: new FormControl('', [Validators.required]),
+        styles_by_ocassion: new FormControl('', [Validators.required]),
+        season: new FormControl('', [Validators.required]),
+        fabric_type: new FormControl('', [Validators.required]),
+        size: new FormControl('', [Validators.required]),
+        sleeve: new FormControl('', [Validators.required]),
+        availability: new FormControl('', [Validators.required]),
+        image_front: new FormControl('', [Validators.required]),
+        image_back: new FormControl('', [Validators.required])
     });
 
   }
@@ -69,56 +60,21 @@ export class CreateComponent implements OnInit {
     });
   }
 
-  offerEnableChanged() {
-    const offerEnableControl = this.form.get('offer_enable');
-    const priceOfferControl = this.form.get('price_offer');
-    const priceControl = this.form.get('price');
+  genderChanged() {
+    const typeGender = this.form.get('gender');
+    const isMen = this.form.get('clothing_type_men');
+    const isWomen = this.form.get('clothing_type_women');
 
     // Si la opción es 'no', establece el valor de 'Price Offer' en blanco
-    if (offerEnableControl.value === 'no') {
-      priceOfferControl.setValue('');
+    if (typeGender.value === 'male') {
+      isWomen.setValue('');
     }
-    if (offerEnableControl.value === 'si') {
-      priceControl.setValue('');
+    if (typeGender.value === 'female') {
+      isMen.setValue('');
     }
   }
 
-  carruselChanged() {
-    const carruselControl = this.form.get('carrousel_num');
-    const imageSecondControl = this.form.get('image_2');
-    const imageThirdControl = this.form.get('image_3');
-    const imageFourthControl = this.form.get('image_4');
-    const imageFifthControl = this.form.get('image_5');
 
-    if (carruselControl.value < 2) {
-      imageSecondControl.setValue('');
-    }
-    if (carruselControl.value < 3) {
-      imageThirdControl.setValue('');
-    }
-    if (carruselControl.value < 4) {
-      imageFourthControl.setValue('');
-    }
-    if (carruselControl.value < 5) {
-      imageFifthControl.setValue('');
-    }
-
-  }
-
-  categoryChanged() {
-    const categoryControl = this.form.get('category');
-    const sizeShoesControl = this.form.get('size_shoes');
-    const sizeFashionControl = this.form.get('size_fashion');
-
-
-    if (categoryControl.value !== 'size_shoes') {
-      sizeShoesControl.setValue('');
-    }
-    if (categoryControl.value !== 'size_fashion') {
-      sizeFashionControl.setValue('');
-    }
-
-  }
 
   get f(){
     return this.form.controls;
