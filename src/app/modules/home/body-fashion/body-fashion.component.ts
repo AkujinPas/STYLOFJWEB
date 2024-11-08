@@ -6,8 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./body-fashion.component.css']
 })
 export class BodyFashionComponent {
-  products = [
 
+  // Propiedades para la notificación
+  showNotification: boolean = false;
+  notificationMessage: string = '';
+
+  // Lista de productos
+  products = [
     { 
       id: 2,
       name: 'Blusa aqua bordada', 
@@ -160,6 +165,9 @@ export class BodyFashionComponent {
     },
   ];
 
+  // Carrito de compras
+  cart: any[] = [];
+
   selectedProduct: any = null;
 
   constructor() {}
@@ -172,5 +180,26 @@ export class BodyFashionComponent {
   // Método para cerrar el modal
   closeModal() {
     this.selectedProduct = null;
+  }
+
+  // Método para agregar el producto al carrito
+  addToCart(product: any) {
+    this.cart.push(product); // Agrega el producto al carrito
+    console.log('Producto añadido al carrito:', product.name);
+  
+    // Mostrar el mensaje en la notificación
+    this.notificationMessage = `${product.name} ha sido añadido al carrito.`;
+    this.showNotification = true;
+  
+    // Cerrar la notificación después de 1.5 segundos
+    setTimeout(() => {
+      this.showNotification = false;
+    }, 2500); // 2.5 segundos visible
+  }
+
+  // Método simulado para proceder con la compra
+  buyNow(product: any) {
+    console.log('Producto comprado:', product.name);
+    // Aquí podrías agregar la lógica para proceder con la compra
   }
 }

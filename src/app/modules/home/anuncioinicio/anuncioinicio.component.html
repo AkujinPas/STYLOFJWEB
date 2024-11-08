@@ -1,1 +1,16 @@
-<p>anuncioinicio works!</p>
+<div class="popup-overlay" *ngIf="showPopup">
+    <div class="popup-content">
+      <!-- Botón Cerrar en la parte superior derecha -->
+      <button class="close-button" (click)="closePopup()">✕</button>
+  
+      <h4>¡No te lo pierdas!</h4>
+      
+      <!-- Imagen del producto con el botón Ver Producto sobre ella -->
+      <div class="image-container">
+        <img [src]="selectedProduct?.image" alt="{{ selectedProduct?.name }}" class="product-image" />
+        <button class="view-product-button" (click)="viewProduct()">Ver Producto</button>
+      </div>
+  
+       </div>
+  </div>
+  
