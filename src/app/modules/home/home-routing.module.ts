@@ -5,7 +5,8 @@ import { BodyShoppingCartComponent } from './body-shopping-cart/body-shopping-ca
 import { AddressProcessComponent } from './address-process/address-process.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', redirectTo: 'inicio', pathMatch: 'full' },
+  { path: 'inicio', component: HomeComponent },
   { path: 'carrito', component: BodyShoppingCartComponent },
   { path: 'direccion-entrega', component: AddressProcessComponent }
 ];
