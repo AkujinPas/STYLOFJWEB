@@ -9,7 +9,6 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   styleUrls: ['./create.component.css']
 })
 export class CreateComponent implements OnInit {
-  image_ini: string | ArrayBuffer | null = null;
   form: FormGroup;
 
   constructor(

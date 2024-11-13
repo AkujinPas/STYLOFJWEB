@@ -24,6 +24,7 @@ import { AnuncioinicioComponent } from './anuncioinicio/anuncioinicio.component'
 import { PaymentProcessComponent } from './payment-process/payment-process.component';
 import { AddressProcessComponent } from './address-process/address-process.component';
 import { PaymentStatusComponent } from './payment-status/payment-status.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { PaymentStatusComponent } from './payment-status/payment-status.componen
     AnuncioinicioComponent,
     PaymentProcessComponent,
     AddressProcessComponent,
-    PaymentStatusComponent
+    PaymentStatusComponent,
+    DashboardComponent
 
   ],
   imports: [
