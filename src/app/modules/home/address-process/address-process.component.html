@@ -1,37 +1,43 @@
 <div class="address-process-container">
   <h3>Elegir método de entrega</h3>
-  
-  <div class="delivery-options">
-    <div class="radio-group">
-      <label>
-        <input type="radio" name="delivery-method" id="pickup-store" checked>
-        Recoger en tienda
-      </label>
-      <label>
-        <input type="radio" name="delivery-method" id="home-delivery">
-        Servicio a domicilio
-      </label>
-      <div id="home-delivery-options" style="display:none;">
+
+  <div class="content-wrapper">
+    <!-- Lado izquierdo: Opciones de entrega y botón de pago -->
+    <div class="delivery-options">
+      <div class="radio-group">
         <label>
-          <input type="radio" name="address-option" id="add-address">
-          Añadir dirección
+          <input type="radio" name="delivery-method" id="pickup-store" checked>
+          Recoger en tienda
         </label>
         <label>
-          <input type="radio" name="address-option" id="choose-location">
-          Elegir ubicación
+          <input type="radio" name="delivery-method" id="home-delivery">
+          Servicio a domicilio
         </label>
+
+          <label>
+            <input type="radio" name="delivery-method" id="add-address">
+            Añadir dirección
+          </label>
+          <label>
+            <input type="radio" name="delivery-method" id="choose-location">
+            Elegir ubicación
+          </label>
+        
       </div>
+      
+      <button class="pay-button">Pagar</button>
     </div>
-  
-    <div class="map-container" id="store-location" style="display:block;">
+
+    <!-- Lado derecho: Mapa de ubicación de tienda -->
+    <div class="map-container" id="store-location" >
       <h4>Ubicación de la tienda</h4>
       <div class="map">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d559.6437388900179!2d-90.73455658486388!3d19.333645437384934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85f771000c4b3d4d%3A0x8df8c5854144d3db!2sSTYLOFJ!5e0!3m2!1ses-419!2smx!4v1726486077485!5m2!1ses-419!2smx"
-          width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          width="550" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       </div>
     </div>
+
+    
   </div>
-  
-  <button class="pay-button">Pagar</button>
 </div>
