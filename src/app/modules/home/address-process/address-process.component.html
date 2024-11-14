@@ -1,35 +1,38 @@
 
-<div class="content-wrapper">
-  <!-- Lado izquierdo: Opciones de entrega y botón de pago -->
-  <div class="delivery-options">
-    <div class="radio-group">
-      <label>
-        <input type="radio" name="delivery-method" id="pickup-store" checked>
-        Recoger en tienda
-      </label>
-      <label>
-        <input type="radio" name="delivery-method" id="home-delivery">
-        Servicio a domicilio
-      </label>
+<div class="address-process-container">
+  <h3>Elegir método de entrega</h3>
 
-      <!-- Opciones adicionales de 'Servicio a domicilio' -->
-      <div id="home-delivery-options" style="display: none;">
+  <div class="content-wrapper">
+    <!-- Lado izquierdo: Opciones de entrega y botón de pago -->
+    <div class="delivery-options">
+      <div class="radio-group">
         <label>
-          <input type="radio" name="delivery-method" id="add-address">
-          Añadir dirección
+          <input type="radio" name="delivery-method" id="pickup-store" checked>
+          Recoger en tienda
         </label>
         <label>
-          <input type="radio" name="delivery-method" id="choose-location">
-          Elegir ubicación
+          <input type="radio" name="delivery-method" id="home-delivery">
+          Servicio a domicilio
         </label>
+
+        <!-- Opciones adicionales de 'Servicio a domicilio' -->
+        <div id="home-delivery-options">
+          <label>
+            <input type="radio" name="address-option" id="add-address">
+            Añadir dirección
+          </label>
+          <label>
+            <input type="radio" name="address-option" id="choose-location">
+            Elegir ubicación
+          </label>
+        </div>
       </div>
+      
+      <button class="pay-button">Pagar</button>
     </div>
-    
-    <button class="pay-button">Pagar</button>
-  </div>
 
-    <!-- Lado derecho: Mapa de ubicación de tienda -->
-    <div class="map-container" id="store-location" >
+    <!-- Lado derecho: Mapa de ubicación de tienda o formulario -->
+    <div class="map-container" id="store-location">
       <h4>Ubicación de la tienda</h4>
       <div class="map">
         <iframe
@@ -38,50 +41,48 @@
       </div>
     </div>
 
-    <!-- Formulario para añadir dirección (se muestra cuando se selecciona Añadir dirección) -->
-    <div class="address-form-container" id="address-form" style="display: none;">
-      <h4>Formulario de Dirección</h4>
-      <form id="address-form">
-        <div class="form-group">
-          <label for="colony">Colonia</label>
-          <input type="text" id="colony" name="colony" required>
-        </div>
-        <div class="form-group">
-          <label for="main-street">Calle principal</label>
-          <input type="text" id="main-street" name="main-street" required>
-        </div>
-        <div class="form-group">
-          <label for="between-streets">Entre calle</label>
-          <input type="text" id="between-streets" name="between-streets">
-        </div>
-        <div class="form-group">
-          <label for="reference">Referencia del domicilio</label>
-          <input type="text" id="reference" name="reference" required>
-        </div>
-        <div class="form-group">
-          <label for="phone">Teléfono</label>
-          <input type="tel" id="phone" name="phone" required>
-        </div>
-        <div class="form-group">
-          <label for="delivery-day">Día de entrega</label>
-          <select id="delivery-day" name="delivery-day">
-            <option value="lunes">Lunes</option>
-            <option value="martes">Martes</option>
-            <option value="miércoles">Miércoles</option>
-            <option value="jueves">Jueves</option>
-            <option value="viernes">Viernes</option>
-            <option value="sábado">Sábado</option>
-            <option value="domingo">Domingo</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="delivery-time">Horario de entrega</label>
-          <select id="delivery-time" name="delivery-time">
-            <option value="8-2">8 AM - 2 PM</option>
-            <option value="5-8">5 PM - 8 PM</option>
-          </select>
-        </div>
-        <button type="submit" class="pay-button">Guardar dirección</button>
-      </form>
+   
+    <!-- Formulario de dirección (se muestra si se selecciona "Añadir dirección") -->
+    <div class="address-form" id="address-form" style="display: none;">
+      <h5>Ingresar Dirección</h5>
+      <!-- Formulario para ingresar la dirección -->
+      <label>Colonia:</label>
+      <input type="text" placeholder="Nombre de la Colonia" />
+      <label>Calle principal:</label>
+      <input type="text" placeholder="Calle principal" />
+      <label>Entre calles:</label>
+      <input type="text" placeholder="Entre calle y calle" />
+      <label>Referencia:</label>
+      <textarea placeholder="Referencia del domicilio"></textarea>
+      <label>Teléfono:</label>
+      <input type="tel" placeholder="Número de teléfono" />
+      
+<!-- Contenedor para "Día de entrega" y "Horario de entrega" en la misma línea -->
+<div class="delivery-day-time">
+  <label>Día de entrega:</label>
+  <select>
+    <option>Lunes</option>
+    <option>Martes</option>
+    <option>Miércoles</option>
+    <option>Jueves</option>
+    <option>Viernes</option>
+    <option>Sábado</option>
+    <option>Domingo</option>
+  </select>
+
+  <label>Horario de entrega:</label>
+  <select>
+    <option>Entre 9 AM y 10 AM</option>
+    <option>Entre 10 AM y 11 AM</option>
+    <option>Entre 11 AM y 12 PM</option>
+    <option>Entre 12 PM y 1 PM</option>
+    <option>Entre 1 PM y 2 PM</option>
+    <option>Entre 5 PM y 6 PM</option>
+    <option>Entre 6 PM y 7 PM</option>
+    <option>Entre 7 PM y 8 PM</option>
+  </select>
+</div>
+      <button class="save-button">Guardar información</button>
     </div>
   </div>
+</div>

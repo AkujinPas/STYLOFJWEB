@@ -2,29 +2,37 @@
   font-family: Arial, sans-serif;
   padding: 20px;
   border: 1px solid #ddd;
-  width: 90%;
-  max-width: 800px;
+  width: 1000px;
+  height: 600px;  /* Ajuste del alto total */
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-h3 {
+h3, h5 {
   color: #333;
   text-align: center;
   font-size: 1.5em;
+  margin-bottom: 20px;
 }
 
 /* Contenedor principal para layout flex */
 .content-wrapper {
   display: flex;
-  justify-content: space-between;
+  width: 100%;
+  height: 100%;
   gap: 20px;
-  flex-wrap: wrap;
+  overflow-y: auto;  /* Permite el desplazamiento si el contenido excede el alto */
 }
 
 /* Lado izquierdo: Opciones de entrega */
 .delivery-options {
-  flex: 1;
-  max-width: 250px;
+  width: 30%;
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .radio-group label {
@@ -46,10 +54,14 @@ h3 {
   border-left: 2px solid #ddd;
 }
 
-/* Lado derecho: Mapa de ubicación */
-.map-container {
-  flex: 2;
-  text-align: center;
+/* Lado derecho: Mapa de ubicación o formulario */
+.map-container, .address-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
 }
 
 .map-container h4 {
@@ -64,46 +76,73 @@ h3 {
   border: none;
 }
 
-/* Botón de Pago */
-.pay-button {
-  display: block;
+.address-form {
+  padding: 10px;
+  width: 100%; /* Se asegura de que el formulario ocupe el 100% del contenedor */
+  max-width: 550px; /* Establece el ancho máximo de 550px */
+  display: flex;
+  flex-direction: column; /* Coloca los elementos uno debajo del otro */
+  gap: 15px; /* Espacio entre los elementos */
+  margin: auto; /* Centra el formulario en el contenedor */
+  max-height: 500px;  /* Limita la altura total del formulario */
+  overflow-y: auto;  /* Permite el desplazamiento si el contenido excede el alto */
+}
+
+.address-form label, .delivery-day-time label {
+  font-size: 1em;
+  width: auto;  /* Elimina el ancho fijo para alinear mejor con los inputs */
+  margin-top: 10px;
+  display: inline-block; /* Hace que el label esté en la misma línea que el campo */
+}
+
+.address-form input, .address-form textarea, .address-form select,
+.delivery-day-time select {
+  width: 100%; /* Ajusta el tamaño de los campos de entrada a 100% del contenedor */
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: inline-block; /* Alinea los inputs en la misma línea */
+}
+
+.address-form textarea {
+  width: 100%; /* Asegura que el textarea ocupe todo el ancho */
+  resize: vertical; /* Permite redimensionar verticalmente el textarea */
+}
+
+/* Modificar para "Día de entrega" y "Horario de entrega" */
+.delivery-day-time {
+  display: flex;
+  gap: 20px; /* Espacio entre los dos campos */
   width: 100%;
-  padding: 15px;
-  background-color: #28a745;
+}
+
+.delivery-day-time select {
+  flex: 1; /* Hace que los selects ocupen el mismo espacio */
+}
+
+/* Estilos del botón */
+.save-button, .pay-button {
+  padding: 10px 15px;
+  background-color: #007bff;
   color: white;
-  font-size: 1.1em;
   border: none;
   cursor: pointer;
-  margin-top: 20px;
   text-align: center;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.save-button:hover, .pay-button:hover {
+  background-color: #0056b3;
+}
+
+/* Botón de Pago */
+.pay-button {
+  background-color: #28a745;
 }
 
 .pay-button:hover {
   background-color: #218838;
-}
-
-/* Mostrar las opciones de "Añadir dirección" y "Elegir ubicación" solo cuando "Servicio a domicilio" esté activo */
-#home-delivery:checked ~ .content-wrapper .delivery-options #home-delivery-options {
-  display: block;
-}
-
-/* Asegurarse de que las opciones de 'Recoger en tienda' y 'Servicio a domicilio' son mutuamente excluyentes */
-#pickup-store:checked ~ .map-container {
-  display: block;
-}
-
-#home-delivery:checked ~ .map-container {
-  display: none;
-}
-
-/* Deshabilitar las opciones de 'Añadir dirección' y 'Elegir ubicación' cuando 'Recoger en tienda' está activo */
-#pickup-store:checked ~ .content-wrapper .delivery-options #home-delivery-options input[type="radio"] {
-  pointer-events: none;
-  opacity: 0.5;
-}
-
-/* Habilitar las opciones de 'Añadir dirección' y 'Elegir ubicación' solo cuando 'Servicio a domicilio' está activo */
-#home-delivery:checked ~ .content-wrapper .delivery-options #home-delivery-options input[type="radio"] {
-  pointer-events: auto;
-  opacity: 1;
 }
