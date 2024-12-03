@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { BodyFashionComponent } from './body-fashion.component';
+import { BodyFemaleComponent } from './body-female.component';
 
-describe('BodyFashionComponent', () => {
-  let component: BodyFashionComponent;
-  let fixture: ComponentFixture<BodyFashionComponent>;
+describe('BodyFemaleComponent', () => {
+  let component: BodyFemaleComponent;
+  let fixture: ComponentFixture<BodyFemaleComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BodyFashionComponent ]
+      declarations: [ BodyFemaleComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BodyFashionComponent);
+    fixture = TestBed.createComponent(BodyFemaleComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

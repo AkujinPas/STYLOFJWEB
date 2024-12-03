@@ -12,7 +12,7 @@
   <div class="row flex-wrap justify-content-center align-items-center">
 
     <div class="col-md-auto">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="inicio">
         <img src="assets/imagenes/StyloFJBoutiqueLong.png" alt="" width="135" height="95" style="object-fit: contain;">
       </a>
     </div>
@@ -21,12 +21,12 @@
     <!-- Categorías -->
     <div class="col-md-auto">
       <div class="nav nav-tabs" id="nav-tab" role="tablist">
-        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button"
+        <button class="nav-link active" routerLink="inicio" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button"
           role="tab" aria-controls="nav-home" aria-selected="true">Inicio</button>
-        <button class="nav-link" id="nav-novedades-tab" data-bs-toggle="tab" data-bs-target="#nav-novedades"
+        <button class="nav-link" routerLink="novedades" id="nav-novedades-tab" data-bs-toggle="tab" data-bs-target="#nav-novedades"
           type="button" role="tab" aria-controls="nav-novedades" aria-selected="false">Novedades</button>
           <div class="nav-item dropdown" id="nav-moda-tab">
-            <button class="nav-link dropdown-toggle" id="dropdownMenuLink" data-bs-toggle="tab" data-bs-target="#nav-moda" aria-expanded="false">
+            <button class="nav-link dropdown-toggle" routerLink="dama" id="dropdownMenuLink" data-bs-toggle="tab" data-bs-target="#nav-moda" aria-expanded="false">
               Dama
             </button>
             <ul class="dropdown-menu gap-1 p-2 rounded-3 mx-0 shadow w-220px" aria-labelledby="dropdownMenuLink" data-bs-theme="dark">
@@ -59,7 +59,7 @@
         <button class="nav-link" id="nav-temporada-tab" data-bs-toggle="tab" data-bs-target="#nav-temporada"
           type="button" role="tab" aria-controls="nav-temporada" aria-selected="false">Ropa de temporada</button>
         <button class="nav-link" id="nav-quienes-somos-tab" data-bs-toggle="tab" data-bs-target="#nav-quienes-somos"
-          type="button" role="tab" aria-controls="nav-quienes-somos" aria-selected="false">¿Quiénes somos?</button>
+          type="button" role="tab" routerLink="nosotros" aria-controls="nav-quienes-somos" aria-selected="false">¿Quiénes somos?</button>
       </div>
     </div>
 
@@ -87,10 +87,8 @@
 <div class="container">
   <div class="tab-content" id="nav-tabContent">
     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-      <app-body-home></app-body-home>
     </div>
     <div class="tab-pane fade" id="nav-moda" role="tabpanel" aria-labelledby="nav-moda-tab">
-      <app-body-fashion></app-body-fashion>
     </div>
     <div class="tab-pane fade" id="nav-novedades" role="tabpanel" aria-labelledby="nav-novedades-tab">
       <p>Aún no hay novedades disponibles.</p>
@@ -102,7 +100,6 @@
       <p>Ropa de temporada disponible próximamente.</p>
     </div>
     <div class="tab-pane fade" id="nav-quienes-somos" role="tabpanel" aria-labelledby="nav-quienes-somos-tab">
-      <app-body-about-us></app-body-about-us>
     </div>
   </div>
 </div>
