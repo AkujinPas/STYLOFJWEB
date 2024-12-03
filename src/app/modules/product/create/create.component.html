@@ -1,0 +1,188 @@
+<div class="container">
+
+  <div class="d-flex justify-content-between">
+    <h4>Añadir producto</h4>
+    <a href="#" routerLink="/product/index" class="btn btn-primaryt">Atras</a>
+  </div>
+
+  <hr />
+
+  <form [formGroup]="form" (ngSubmit)="submit()">
+
+
+
+    <div class="form-group row">
+      <div class="col-md-6 ">
+        <label for="title">Nombre:</label>
+        <input formControlName="name" id="name" type="text" class="form-control">
+      </div>
+    </div>
+
+
+    <!-- Price -->
+    <div class="form-group row">
+      <div class="col-md-6">
+        <label for="price">Precio:</label>
+        <input formControlName="price" id="price" type="number" class="form-control">
+      </div>
+    </div>
+
+
+
+
+
+    <!-- Stock -->
+    <div class="form-group row">
+      <div class="col-md-6">
+        <label for="brand">Marca:</label>
+        <select formControlName="brand" id="brand" class="form-control">
+          <option value="Local">Local</option>
+          <option value="Foreign">Extranjera</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Category -->
+    <div class="form-group row">
+      <div class="col-md-6">
+        <label for="gender">Genero:</label>
+        <select formControlName="gender" id="gender" class="form-control">
+          <option value="female">Dama</option>
+          <option value="male">Caballero</option>
+        </select>
+      </div>
+    </div>
+
+
+    <!-- ropa dama -->
+    <div class="form-group row" *ngIf="form.get('gender').value === 'female'">
+      <div class="col-md-6">
+        <label for="clothing_type_women">Tipo de ropa:</label>
+        <select formControlName="clothing_type_women" id="clothing_type_women" class="form-control">
+          <option value="Skirt">Falda</option>
+          <option value="Shorts">Short</option>
+          <option value="Pants">Pantalon</option>
+          <option value="Swimwear">Traje de baño</option>
+          <option value="Blouse">Blusa</option>
+          <option value="Dress">Vestido</option>
+          <option value="Overall">Overol</option>
+          <option value="Jumper">Jumper</option>
+          <option value="Shirt">Camisa</option>
+          <option value="Dress Blouse">Blusa de vestir</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- ropa dama -->
+    <div class="form-group row" *ngIf="form.get('gender').value === 'male'">
+      <div class="col-md-6">
+        <label for="clothing_type_men">Tipo de ropa:</label>
+        <select formControlName="clothing_type_men" id="clothing_type_men" class="form-control">
+          <option value="Shorts">Short</option>
+          <option value="Pants">Pantalon</option>
+          <option value="Dress Shirt">Camisa de vestir</option>
+          <option value="T-Shirt">Playera</option>
+        </select>
+      </div>
+    </div>    
+
+    <div class="form-group row">
+      <div class="col-md-6">
+        <label for="styles_by_ocassion">De ocasión:</label>
+        <select formControlName="styles_by_ocassion" id="styles_by_ocassion" class="form-control">
+          <option value="casual">Casual</option>
+          <option value="formal">Formal</option>
+          <option value="evening wear">Ropa de noche</option>
+          <option value="sportswear">Ropa deportiva</option>
+          <option value="party wear">Ropa de fiesta</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-md-6">
+        <label for="fabric_type">Material:</label>
+        <select formControlName="fabric_type" id="fabric_type" class="form-control">
+          <option value="Cotton">Algodón</option>
+          <option value="Mixed Cotton">Mezcla de algodón</option>
+          <option value="Polyester">Poliester</option>
+          <option value="Nylon">Nylon</option>
+          <option value="Synthetic">Sintetico</option>
+          <option value="Elastane">Elastano</option>
+          <option value="Satin">Satin</option>
+          <option value="Lycra">Licra</option>
+          <option value="Denim">Denim</option>
+          <option value="Rayon">Rayon</option>
+          <option value="Lace">Encaje</option>
+          <option value="Vinyl">Vinil</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-md-6">
+        <label for="size">Talla:</label>
+        <select formControlName="size" id="size" class="form-control">
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+          <option value="XXL">XXL</option>
+          <option value="XXXL">XXXL</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-md-6">
+        <label for="sleeve">Manga:</label>
+        <select formControlName="sleeve" id="sleeve" class="form-control">
+          <option value="short">Corta</option>
+          <option value="3-4">3-4</option>
+          <option value="without">Sin manga</option>
+          <option value="large">Larga</option>
+        </select>
+      </div>
+    </div>
+
+  
+    <!-- Image Ini -->
+    <div class="form-group row">
+      <div class="col-md-6">
+        <label for="image_front">Imagen Frontal</label>
+        <input formControlName="image_front" id="image_front" type="file" (change)="onFileSelected($event, 'image_front')"
+          class="form-control" accept="image/*">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-md-6">
+        <label for="image_back">Imagen Trasera</label>
+        <input formControlName="image_back" id="image_back" type="file" (change)="onFileSelected($event, 'image_back')"
+          class="form-control" accept="image/*">
+      </div>
+    </div>
+ 
+    <div class="form-group row">
+      <div class="col-md-6">
+        <label for="availability">Disponibilidad:</label>
+        <select formControlName="availability" id="availability" class="form-control">
+          <option value="Available">Disponible</option>
+          <option value="Unavailable">No disponible</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-md-6">
+        <label for="season">Temporada:</label>
+        <select formControlName="season" id="season" class="form-control">
+          <option value="Spring-summer">Primavera-Verano</option>
+          <option value="Autumn-winter">Otoño-Invierno</option>
+        </select>
+      </div>
+    </div>
+
+    <button class="btn btn-primary" type="submit">Guardar</button>
+  </form>
+</div>
