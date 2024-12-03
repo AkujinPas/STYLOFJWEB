@@ -5,14 +5,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { ProductModule } from './modules/home/product/product.module';
+import { ProductModule } from './modules/product/product.module';
 
 import { CommonModule } from '@angular/common';
 import { FooterComponent } from './modules/home/footer/footer.component';
 import { HeaderComponent } from './modules/home/header/header.component';
 import { BodyAboutUsComponent } from './modules/home/body-about-us/body-about-us.component';
 import { BodyHomeComponent } from './modules/home/body-home/body-home.component';
-import { BodyFashionComponent } from './modules/home/body-fashion/body-fashion.component';
+import { BodyFemaleComponent } from './modules/home/body-female/body-female.component';
 import { BodyContactComponent } from './modules/home/body-contact/body-contact.component';
 import { BodyShoppingCartComponent } from './modules/home/body-shopping-cart/body-shopping-cart.component';
 import { BodyOfertasComponent } from './modules/home/body-ofertas/body-ofertas.component';
@@ -27,10 +27,13 @@ import { AnuncioinicioComponent } from './modules/home/anuncioinicio/anuncioinic
 import { PaymentProcessComponent } from './modules/home/payment-process/payment-process.component';
 import { AddressProcessComponent } from './modules/home/address-process/address-process.component';
 import { PaymentStatusComponent } from './modules/home/payment-status/payment-status.component';
-import { DashboardComponent } from './modules/home/dashboard/dashboard.component';
-import { IndexComponent } from './modules/home/product/index/index.component';
-import { CreateComponent } from './modules/home/product/create/create.component';
-import { ProductRoutingModule } from './modules/home/product/product-routing.module';
+import { DashboardComponent } from './modules/dashboard/dashboard.component';
+import { IndexComponent } from './modules/product/index/index.component';
+import { CreateComponent } from './modules/product/create/create.component';
+import { ProductRoutingModule } from './modules/product/product-routing.module';
+import { SimplelayoutComponent } from './modules/simplelayout/simplelayout.component';
+import { HflayoutComponent } from './modules/hflayout/hflayout.component';
+import { DashboardlayoutComponent } from './modules/dashboardlayout/dashboardlayout.component';
 
 
 @NgModule({
@@ -40,7 +43,7 @@ import { ProductRoutingModule } from './modules/home/product/product-routing.mod
     HeaderComponent,
     BodyAboutUsComponent,
     BodyHomeComponent,
-    BodyFashionComponent,
+    BodyFemaleComponent,
     BodyContactComponent,
     BodyShoppingCartComponent,
     BodyOfertasComponent,
@@ -56,6 +59,9 @@ import { ProductRoutingModule } from './modules/home/product/product-routing.mod
     AddressProcessComponent,
     PaymentStatusComponent,
     DashboardComponent,
+    SimplelayoutComponent,
+    HflayoutComponent,
+    DashboardlayoutComponent,
  
   ],
   imports: [

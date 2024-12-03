@@ -9,13 +9,5 @@ import { FormControl } from '@angular/forms'
 export class AppComponent {
   title = 'ISC';
 
-  isModalOpen = true;
 
-  openModal() {
-    this.isModalOpen = true;
-  }
-
-  closeModal() {
-    this.isModalOpen = false;
-  }
 }

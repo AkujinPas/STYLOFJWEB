@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-body-fashion',
-  templateUrl: './body-fashion.component.html',
-  styleUrls: ['./body-fashion.component.css']
+  selector: 'app-body-female',
+  templateUrl: './body-female.component.html',
+  styleUrls: ['./body-female.component.css']
 })
-export class BodyFashionComponent {
+export class BodyFemaleComponent {
 
   // Propiedades para la notificación
   showNotification: boolean = false;
@@ -17,8 +17,8 @@ export class BodyFashionComponent {
       id: 2,
       name: 'Blusa aqua bordada', 
       price: 39.99, 
-      imageF: 'assets/imagenes/fashion/Blusa-bordado-aqua-frente.jpg',
-      imageB: 'assets/imagenes/fashion/Blusa-bordado-aqua-atras.jpg',
+      imageF: 'assets/imagenes/female/Blusa-bordado-aqua-frente.jpg',
+      imageB: 'assets/imagenes/female/Blusa-bordado-aqua-atras.jpg',
       brand: 'H&M', 
       fabric: 'Poliéster', 
       size: 'L' 
@@ -27,8 +27,8 @@ export class BodyFashionComponent {
       id: 3,
       name: 'Camisa larga tropical', 
       price: 49.99, 
-      imageF: 'assets/imagenes/fashion/Camisa-larga-azul-frente.jpg',
-      imageB: 'assets/imagenes/fashion/Camisa-larga-azul-atras.jpg',
+      imageF: 'assets/imagenes/female/Camisa-larga-azul-frente.jpg',
+      imageB: 'assets/imagenes/female/Camisa-larga-azul-atras.jpg',
       brand: 'Ralph Lauren', 
       fabric:'Lino', 
       size: 'S' 
@@ -37,8 +37,8 @@ export class BodyFashionComponent {
       id:4,
       name: 'Jumper talla G, corto con estampado floral y encaje color negro', 
       price: 49.99, 
-      imageF: 'assets/imagenes/fashion/Jumper-estampado-floral.jpg',
-      imageB: 'assets/imagenes/fashion/Jumper-estampado-floral.jpg',
+      imageF: 'assets/imagenes/female/Jumper-estampado-floral.jpg',
+      imageB: 'assets/imagenes/female/Jumper-estampado-floral.jpg',
       brand: 'Burberry', 
       fabric: 'Mezcla de Algodón', 
       size: 'M' 
@@ -47,8 +47,8 @@ export class BodyFashionComponent {
       id:5,
       name: 'Jumper estampado rosa', 
       price: 49.99, 
-      imageF: 'assets/imagenes/fashion/Jumper-flores-frente.jpg',
-      imageB: 'assets/imagenes/fashion/Jumper-flores-atras.jpg',
+      imageF: 'assets/imagenes/female/Jumper-flores-frente.jpg',
+      imageB: 'assets/imagenes/female/Jumper-flores-atras.jpg',
       brand: 'H&M', 
       fabric: 'Poliéster', 
       size: 'M' 
@@ -57,8 +57,8 @@ export class BodyFashionComponent {
       id:6,
       name: 'Overol de mezclilla', 
       price: 29.99, 
-      imageF: 'assets/imagenes/fashion/Overol-mezclilla-claro.jpg',
-      imageB: 'assets/imagenes/fashion/Overol-mezclilla-claro.jpg',
+      imageF: 'assets/imagenes/female/Overol-mezclilla-claro.jpg',
+      imageB: 'assets/imagenes/female/Overol-mezclilla-claro.jpg',
       brand: 'Optima', 
       fabric: 'Mezclilla', 
       size: 'L' 
@@ -67,8 +67,8 @@ export class BodyFashionComponent {
       id:7,
       name: 'Overol de mezclilla azul', 
       price: 29.99, 
-      imageF: 'assets/imagenes/fashion/Overol-mezclilla-oscuro.jpg',
-      imageB: 'assets/imagenes/fashion/Overol-mezclilla-oscuro.jpg',
+      imageF: 'assets/imagenes/female/Overol-mezclilla-oscuro.jpg',
+      imageB: 'assets/imagenes/female/Overol-mezclilla-oscuro.jpg',
       brand: 'Zara', 
       fabric: 'Mezclilla', 
       size: 'L' 
@@ -77,8 +77,8 @@ export class BodyFashionComponent {
       id:8,
       name: 'Vestido ajustado color lila', 
       price: 29.99, 
-      imageF: 'assets/imagenes/fashion/Vestido-ajustado-lila.jpg',
-      imageB: 'assets/imagenes/fashion/Vestido-ajustado-lila.jpg',
+      imageF: 'assets/imagenes/female/Vestido-ajustado-lila.jpg',
+      imageB: 'assets/imagenes/female/Vestido-ajustado-lila.jpg',
       brand: 'Zara', 
       fabric: 'Algodón', 
       size: 'S' 
@@ -87,8 +87,8 @@ export class BodyFashionComponent {
       id:9,
       name: 'Vestido ajustado color rojo', 
       price: 29.99, 
-      imageF: 'assets/imagenes/fashion/Vestido-ajustado-rojo-frente.jpg',
-      imageB: 'assets/imagenes/fashion/Vestido-ajustado-rojo-atras.jpg',
+      imageF: 'assets/imagenes/female/Vestido-ajustado-rojo-frente.jpg',
+      imageB: 'assets/imagenes/female/Vestido-ajustado-rojo-atras.jpg',
       brand: 'Lacoste', 
       fabric: 'Mezcla de Algodón', 
       size: 'M' 
@@ -97,8 +97,8 @@ export class BodyFashionComponent {
       id:10,
       name: 'Vestido azul cielo', 
       price: 29.99, 
-      imageF: 'assets/imagenes/fashion/Vestido-azul-cielo-frente.jpg',
-      imageB: 'assets/imagenes/fashion/Vestido-azul-cielo-atras.jpg',
+      imageF: 'assets/imagenes/female/Vestido-azul-cielo-frente.jpg',
+      imageB: 'assets/imagenes/female/Vestido-azul-cielo-atras.jpg',
       brand: 'Under Armour', 
       fabric: 'Lino', 
       size: 'M' 
@@ -107,8 +107,8 @@ export class BodyFashionComponent {
       id:11,
       name: 'Vestido corto color Beige', 
       price: 29.99, 
-      imageF: 'assets/imagenes/fashion/Vestido-beige-corto-frente.jpg',
-      imageB: 'assets/imagenes/fashion/Vestido-beige-corto-frente.jpg',
+      imageF: 'assets/imagenes/female/Vestido-beige-corto-frente.jpg',
+      imageB: 'assets/imagenes/female/Vestido-beige-corto-frente.jpg',
       brand: 'Gucci', 
       fabric: 'Poliéster', 
       size: 'M' 
@@ -117,8 +117,8 @@ export class BodyFashionComponent {
       id:12,
       name: 'Vestido estampado de cuadros', 
       price: 29.99, 
-      imageF: 'assets/imagenes/fashion/Vestido-cuadros-frente.jpg',
-      imageB: 'assets/imagenes/fashion/Vestido-cuadros-atras.jpg',
+      imageF: 'assets/imagenes/female/Vestido-cuadros-frente.jpg',
+      imageB: 'assets/imagenes/female/Vestido-cuadros-atras.jpg',
       brand: 'Zara', 
       fabric: 'Algodón', 
       size: 'L' 
@@ -127,8 +127,8 @@ export class BodyFashionComponent {
       id:13,
       name: 'Vestido multicolor', 
       price: 29.99, 
-      imageF: 'assets/imagenes/fashion/Vestido-estampado-colores-frente.jpg',
-      imageB: 'assets/imagenes/fashion/Vestido-estampado-colores-atras.jpg',
+      imageF: 'assets/imagenes/female/Vestido-estampado-colores-frente.jpg',
+      imageB: 'assets/imagenes/female/Vestido-estampado-colores-atras.jpg',
       brand: 'Gucci', 
       fabric: 'Lana', 
       size: 'S' 
@@ -137,8 +137,8 @@ export class BodyFashionComponent {
       id:14,
       name: 'Vestido con cuadros azul', 
       price: 29.99, 
-      imageF: 'assets/imagenes/fashion/Vestido-estampado-cuadros-frente.jpg',
-      imageB: 'assets/imagenes/fashion/Vestido-estampado-cuadros-atras.jpg',
+      imageF: 'assets/imagenes/female/Vestido-estampado-cuadros-frente.jpg',
+      imageB: 'assets/imagenes/female/Vestido-estampado-cuadros-atras.jpg',
       brand: 'Optima', 
       fabric: 'Mezcla de Algodón', 
       size: 'L' 
@@ -147,8 +147,8 @@ export class BodyFashionComponent {
       id:15,
       name: 'Vestido estampado de hoja', 
       price: 29.99, 
-      imageF: 'assets/imagenes/fashion/Vestido-estampado-verde-hojas.jpg',
-      imageB: 'assets/imagenes/fashion/Vestido-estampado-verde-hojas.jpg',
+      imageF: 'assets/imagenes/female/Vestido-estampado-verde-hojas.jpg',
+      imageB: 'assets/imagenes/female/Vestido-estampado-verde-hojas.jpg',
       brand: 'H&M', 
       fabric: 'Lino', 
       size: 'M' 
@@ -157,8 +157,8 @@ export class BodyFashionComponent {
       id:16,
       name: 'Vestido largo gris estampado', 
       price: 29.99, 
-      imageF: 'assets/imagenes/fashion/Vestido-gris-estampado-largo.jpg',
-      imageB: 'assets/imagenes/fashion/Vestido-gris-estampado-largo.jpg',
+      imageF: 'assets/imagenes/female/Vestido-gris-estampado-largo.jpg',
+      imageB: 'assets/imagenes/female/Vestido-gris-estampado-largo.jpg',
       brand: 'Optima', 
       fabric: 'Algodón', 
       size: 'S' 
